@@ -1,0 +1,67 @@
+﻿@model Teleboard.PresentationModel.Model.Channel.ChannelPM
+@{
+    ViewBag.Title = Resources.AddChannel;
+}
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="card">
+        <div class="card-block card-body">
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.TenantId, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @{
+                            var tenants = ViewBag.SelectTenants as IEnumerable<SelectListItem>;
+                            if (tenants.Any())
+                            {
+                                tenants.First().Selected = true;
+                            }
+                        }
+                        @Html.DropDownListFor(model => model.TenantId, tenants, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.TenantId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-success waves-effect waves-light">
+                <span class="btn-label"><i class="fa fa-save"></i></span>@Resources.Save
+            </button>
+        </div>
+    </div>
+}
+
+
+
+
+@section BreadcrumbItems {
+    
+    <li class="breadcrumb-item">
+        <a href="#">@Resources.Channel</a>
+    </li>
+    <li class="breadcrumb-item active">@Resources.AddChannel</li>
+}
+
+@section Scripts {
+
+}
+

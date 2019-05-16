@@ -1,0 +1,867 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountConfirmationEmailSent" xml:space="preserve">
+    <value>ایمیل فعال سازی حساب کاربری ارسال شد</value>
+  </data>
+  <data name="AccountCreatedEmailBody" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>اقدام</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>افزودن</value>
+  </data>
+  <data name="AddANewDevice" xml:space="preserve">
+    <value>افزودن یک دستگاه جدید</value>
+  </data>
+  <data name="AddAPhoneNumber" xml:space="preserve">
+    <value>یک شماره تلفن وارد کنید</value>
+  </data>
+  <data name="AddChannel" xml:space="preserve">
+    <value>افزودن کانال</value>
+  </data>
+  <data name="AddContent" xml:space="preserve">
+    <value>افزودن محتوا</value>
+  </data>
+  <data name="AddDevice" xml:space="preserve">
+    <value>افزودن دستگاه</value>
+  </data>
+  <data name="AddNewChannel" xml:space="preserve">
+    <value>افزودن کانال جدید</value>
+  </data>
+  <data name="AddNewConnectionType" xml:space="preserve">
+    <value>افزودن کانکشن جدید</value>
+  </data>
+  <data name="AddNewContentType" xml:space="preserve">
+    <value>افزودن نوع محتوای جدید</value>
+  </data>
+  <data name="AddNewRole" xml:space="preserve">
+    <value>افزودن نقش جدید</value>
+  </data>
+  <data name="AddNewTenant" xml:space="preserve">
+    <value>افزودن </value>
+  </data>
+  <data name="AddNewTranslate" xml:space="preserve">
+    <value>افزودن ترجمه جدید</value>
+  </data>
+  <data name="AddNewUser" xml:space="preserve">
+    <value>افزودن کاربر جدید</value>
+  </data>
+  <data name="AddRole" xml:space="preserve">
+    <value>افزودن نقش</value>
+  </data>
+  <data name="AddTenant" xml:space="preserve">
+    <value>افزودن سازمان</value>
+  </data>
+  <data name="AddUser" xml:space="preserve">
+    <value>افزودن کاربر</value>
+  </data>
+  <data name="Administration" xml:space="preserve">
+    <value>تنظیمات سامانه</value>
+  </data>
+  <data name="AllContents" xml:space="preserve">
+    <value>مدیریت محتوا</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>تله برد</value>
+  </data>
+  <data name="Approval" xml:space="preserve">
+    <value>تایید</value>
+  </data>
+  <data name="Approve" xml:space="preserve">
+    <value>تایید</value>
+  </data>
+  <data name="ApproveContent" xml:space="preserve">
+    <value>تایید محتوا</value>
+  </data>
+  <data name="AreYouSureToDelete" xml:space="preserve">
+    <value>از حذف اطمینان دارید؟</value>
+  </data>
+  <data name="AreYouSureYouWantToApproveThis" xml:space="preserve">
+    <value>از تایید این محتوا اطمینان دارید؟</value>
+  </data>
+  <data name="AssociateYourLoginProviderAccount" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AssociationForm" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BackToList" xml:space="preserve">
+    <value>بازگشت به لیست</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>لغو</value>
+  </data>
+  <data name="CannotAddRolesToUser" xml:space="preserve">
+    <value>امکان افزودن نقش ها به کاربر وجود ندارد</value>
+  </data>
+  <data name="CannotAddTenantsToUser" xml:space="preserve">
+    <value>امکان افزودن کاربر به سازمان وجود ندارد</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>تغییر کلمه عبور</value>
+  </data>
+  <data name="ChangePasswordForm" xml:space="preserve">
+    <value>تغییر فرم کلمه عبور</value>
+  </data>
+  <data name="ChangeYourAccountSettings" xml:space="preserve">
+    <value>تغییر تنظیمات حساب کاربری</value>
+  </data>
+  <data name="ChangeYourPassword" xml:space="preserve">
+    <value>کله عبور خود را تغییر دهید</value>
+  </data>
+  <data name="Channel" xml:space="preserve">
+    <value>کانال</value>
+  </data>
+  <data name="ChannelContents" xml:space="preserve">
+    <value>مدیریت محتوای کانال</value>
+  </data>
+  <data name="ChannelDetails" xml:space="preserve">
+    <value>جزئیات کانال</value>
+  </data>
+  <data name="Channels" xml:space="preserve">
+    <value>کانال‌ها</value>
+  </data>
+  <data name="CheckYourEmailToResetPassword" xml:space="preserve">
+    <value>لینک بازنشانی کلمه عبور به ایمیل شما ارسال شده است.</value>
+  </data>
+  <data name="ConfirmAccountEmailBody" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ConfirmEmail" xml:space="preserve">
+    <value>ایمیل تایید</value>
+  </data>
+  <data name="ConfirmYourAccount" xml:space="preserve">
+    <value>تایید حساب کاربری</value>
+  </data>
+  <data name="ConnectionType" xml:space="preserve">
+    <value>نوع کانکشن</value>
+  </data>
+  <data name="ConnectionTypes" xml:space="preserve">
+    <value>انواع کانکشن</value>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>محتوا</value>
+  </data>
+  <data name="ContentApproval" xml:space="preserve">
+    <value>تایید محتوا</value>
+  </data>
+  <data name="Contents" xml:space="preserve">
+    <value>مدیریت محتوا</value>
+  </data>
+  <data name="ContentsOfChannel" xml:space="preserve">
+    <value>محتوای کانال</value>
+  </data>
+  <data name="ContentType" xml:space="preserve">
+    <value>نوع محتوا</value>
+  </data>
+  <data name="ContentTypeNotDefined" xml:space="preserve">
+    <value>نوع محتوا تعریف نشده است</value>
+  </data>
+  <data name="ContentTypes" xml:space="preserve">
+    <value>انواع محتوا</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>ایجاد</value>
+  </data>
+  <data name="CreateLocalLogin" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CreateNewAccount" xml:space="preserve">
+    <value>ایجاد حساب کاربری جدید</value>
+  </data>
+  <data name="CreatePassword" xml:space="preserve">
+    <value>ایجاد کلمه عبور</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>داشبورد</value>
+  </data>
+  <data name="DayView" xml:space="preserve">
+    <value>نمایش (روز)</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="DeleteChannel" xml:space="preserve">
+    <value>حذف کانال</value>
+  </data>
+  <data name="DeleteThisChannel" xml:space="preserve">
+    <value>حذف این کانال</value>
+  </data>
+  <data name="DeleteThisDevice" xml:space="preserve">
+    <value>حذف این دستگاه</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>شرح</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>جزئیات</value>
+  </data>
+  <data name="Device" xml:space="preserve">
+    <value>دستگاه</value>
+  </data>
+  <data name="DeviceDetails" xml:space="preserve">
+    <value>جزئیات دستگاه</value>
+  </data>
+  <data name="DeviceIdentifierIsDuplicate" xml:space="preserve">
+    <value>شناسه دستگاه تکراری است</value>
+  </data>
+  <data name="Devices" xml:space="preserve">
+    <value>دستگاه‌ها</value>
+  </data>
+  <data name="DeviceTimeBox" xml:space="preserve">
+    <value>زمانبندی دستگاه</value>
+  </data>
+  <data name="DidYouForgetYourPassword" xml:space="preserve">
+    <value>کلمه عبورتان را فراموش کرده‌اید؟</value>
+  </data>
+  <data name="DidYouKnow" xml:space="preserve">
+    <value>آیا می‌دانستید؟</value>
+  </data>
+  <data name="DuplicateChannelName" xml:space="preserve">
+    <value>نام کانال تکراری است</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>مدت</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>ویرایش</value>
+  </data>
+  <data name="EditChannel" xml:space="preserve">
+    <value>ویرایش کانال</value>
+  </data>
+  <data name="EditContent" xml:space="preserve">
+    <value>ویرایش محتوا</value>
+  </data>
+  <data name="EditDevice" xml:space="preserve">
+    <value>ویرایش دستگاه</value>
+  </data>
+  <data name="EditRole" xml:space="preserve">
+    <value>ویرایش نقش</value>
+  </data>
+  <data name="EditUser" xml:space="preserve">
+    <value>ویرایش کاربر</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>ایمیل</value>
+  </data>
+  <data name="EmailConfirmationFailed" xml:space="preserve">
+    <value>تایید ایمیل موفقیت آمیز نبود</value>
+  </data>
+  <data name="EmailResetLink" xml:space="preserve">
+    <value>لینک بازنشانی کلمه عبور</value>
+  </data>
+  <data name="EnterVerificationCode" xml:space="preserve">
+    <value>کد اعتبارسنجی را وارد کنید</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>خطا</value>
+  </data>
+  <data name="ErrorOccurred" xml:space="preserve">
+    <value>خطا رخ داد</value>
+  </data>
+  <data name="ExternalAuthenticationConfigurationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ExternalLoginRemoved" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ExternalLogins" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>نام فایل</value>
+  </data>
+  <data name="FileSizeInMegaBytes" xml:space="preserve">
+    <value>اندازه فایل</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="ForgotPasswordConfirmation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>جمعه</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>از</value>
+  </data>
+  <data name="InvalidCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InvalidDateRange" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InvalidEmailForResetPassword" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InvalidLoginAttempt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InvalidResetPasswordParameter" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InvalidSubscriptionCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InvalidUserNameOrPassword" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LastConnectivity" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>نام خانوادگی</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Log" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LoginFailure" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LoginUsingYourProvider" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Logs" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Management" xml:space="preserve">
+    <value>مدیریت</value>
+  </data>
+  <data name="ManageYourExternalLogins" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MissingParameter" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ModerationOnChennal" xml:space="preserve">
+    <value>نظارت کانال</value>
+  </data>
+  <data name="ModerationOnContent" xml:space="preserve">
+    <value>نظارت محتوا</value>
+  </data>
+  <data name="ModerationOnTimeBox" xml:space="preserve">
+    <value>نظارت زمانبندی</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Move" xml:space="preserve">
+    <value>جابجایی</value>
+  </data>
+  <data name="MoveDown" xml:space="preserve">
+    <value>پایین</value>
+  </data>
+  <data name="MoveUp" xml:space="preserve">
+    <value>بالا</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="NewKey" xml:space="preserve">
+    <value>کلید جدید</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>خیر</value>
+  </data>
+  <data name="NoContents" xml:space="preserve">
+    <value>محتوایی وجود ندارد</value>
+  </data>
+  <data name="NoContentsToApprove" xml:space="preserve">
+    <value>محتوایی برای تایید وجود ندارد</value>
+  </data>
+  <data name="NotApproved" xml:space="preserve">
+    <value>تایید نشده</value>
+  </data>
+  <data name="NoTwoFactorAuthenticationProvidersConfigured" xml:space="preserve">
+    <value>NoTwoFactorAuthenticationProvidersConfigured</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>تایید</value>
+  </data>
+  <data name="Online" xml:space="preserve">
+    <value>آنلاین</value>
+  </data>
+  <data name="PageHelpMessage_Approval_Index" xml:space="preserve">
+    <value>در این صفحه محتواهایی که در انتظار تایید شدن هستند را مشاهده می‌کنید. این فایل‌ها تا زمانی که تایید نشده اند، در هیچ دستگاهی پخش نخواهند شد.</value>
+  </data>
+  <data name="PageHelpMessage_Channel_Contents" xml:space="preserve">
+    <value>در این صفحه میتوانید محتوای کانال را مشاهده و آنها را مدیریت کنید. تمامی محتوای آپلود شده در ستون چپ قرار دارند. با انتخاب کلید جابجایی، محتوای مورد نظر به این کانال اضافه میشود.</value>
+  </data>
+  <data name="PageHelpMessage_Channel_Index" xml:space="preserve">
+    <value>در این صفحه می‌توانید کانال‌های تعریف شده را مشاهده کنید. برای مدیریت محتوای یک کانال، آیکون مدیریت محتوای کانال را کلیک نمایید.</value>
+  </data>
+  <data name="PageHelpMessage_Content_Index" xml:space="preserve">
+    <value>تمامی اطلاعات ذخیره شده توسط کاربران آن مجموعه در این صفحه قرار دارد که تنها درصورتی که توسط مدیریت نرم افزار از پیش تأیید شده باشد قابل پخش می باشد .</value>
+  </data>
+  <data name="PageHelpMessage_Scheduler_Create" xml:space="preserve">
+    <value>در این صفحه می‌توانید یک دستگاه جدید تعریف کنید.</value>
+  </data>
+  <data name="PageHelpMessage_Schedule_Index" xml:space="preserve">
+    <value>در این صفحه لیست دستگاه ها رامشاهده می نمایید. برای مدیریت زمان پخش هر دستگاه، روی آیکون زمانبندی مربوط به آن کلیک فرمایید.</value>
+  </data>
+  <data name="PageHelpMessage_TimeBox_Index" xml:space="preserve">
+    <value>در این صفحه می توانید بر اساس نیاز، مدت زمان پخش هر کانال را مشخص کنید.</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>کلمه عبور</value>
+  </data>
+  <data name="PasswordChanged" xml:space="preserve">
+    <value>کلمه عبور تغییر کرد</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>شماره تلفن</value>
+  </data>
+  <data name="PleaseApproveContents" xml:space="preserve">
+    <value>لطفا این محتواها را تایید کنید</value>
+  </data>
+  <data name="PleaseCreateAChannel" xml:space="preserve">
+    <value>لطفا یک کانال ایجاد کنید</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>ثبت</value>
+  </data>
+  <data name="RegisterationDate" xml:space="preserve">
+    <value>تاریخ ثبت</value>
+  </data>
+  <data name="RegisteredLogins" xml:space="preserve">
+    <value>ورودهای ثبت شده</value>
+  </data>
+  <data name="RemoveAllSchedulings" xml:space="preserve">
+    <value>حذف همه زمانبندی ها</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>الزامی</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>بازنشانی</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>بازنشانی کلمه عبور</value>
+  </data>
+  <data name="ResetPasswordConfirmation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ResetPasswordEmailBody" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ResetPasswordToDefault" xml:space="preserve">
+    <value>بازنشانی کلمه عبور به مقدار اولیه</value>
+  </data>
+  <data name="ResetYourPassword" xml:space="preserve">
+    <value>کلمه عبور خود را بازنشانی کنید</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>نقش‌ها</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>شنبه</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>ذخیره</value>
+  </data>
+  <data name="SaveThisTimeBox" xml:space="preserve">
+    <value>ذخیره این تایم باکس</value>
+  </data>
+  <data name="Scheduler" xml:space="preserve">
+    <value>زمانبندی</value>
+  </data>
+  <data name="Security" xml:space="preserve">
+    <value>امنیت</value>
+  </data>
+  <data name="SelectedContentsForDisplayingInChannel" xml:space="preserve">
+    <value>محتوای انتخاب شده</value>
+  </data>
+  <data name="SelectTaskForListBellow" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SelectTwoFactorAuthenticationProvider" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>ارسال</value>
+  </data>
+  <data name="SendVerificationCode" xml:space="preserve">
+    <value>ارسال کد تاییدیه</value>
+  </data>
+  <data name="SetPassword" xml:space="preserve">
+    <value>تعیین کلمه عبور</value>
+  </data>
+  <data name="SignInToYourAccount" xml:space="preserve">
+    <value>ورود به حساب کاربری</value>
+  </data>
+  <data name="SignUp" xml:space="preserve">
+    <value>ثبت نام</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>اندازه</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>ارسال</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>یکشنبه</value>
+  </data>
+  <data name="SupportedMimeTypes" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SupportedMimeTypesMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TanantName" xml:space="preserve">
+    <value>نام سازمان</value>
+  </data>
+  <data name="Task" xml:space="preserve">
+    <value>وظیفه</value>
+  </data>
+  <data name="Tenant" xml:space="preserve">
+    <value>سازمان</value>
+  </data>
+  <data name="TenantName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Tenants" xml:space="preserve">
+    <value>سازمان‌ها</value>
+  </data>
+  <data name="ThankYouForConfirmingEmailMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ThereAreNoExternalAuthenticationServicesConfigured" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>پنجشنبه</value>
+  </data>
+  <data name="TimeBox" xml:space="preserve">
+    <value>جدول زمانبندی</value>
+  </data>
+  <data name="TimeBoxes" xml:space="preserve">
+    <value>زمانبندی‌ها</value>
+  </data>
+  <data name="TimeZone" xml:space="preserve">
+    <value>ناحیه زمانی</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>تا</value>
+  </data>
+  <data name="Translate" xml:space="preserve">
+    <value>ترجمه</value>
+  </data>
+  <data name="Translation" xml:space="preserve">
+    <value>ترجمه</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>سه‌شنبه</value>
+  </data>
+  <data name="TwoFactorAuthentication" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TwoFactorAuthenticationHasBeenSet" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UnsuccessfulLoginWithService" xml:space="preserve">
+    <value>ورود غیر موفق</value>
+  </data>
+  <data name="Upload" xml:space="preserve">
+    <value>آپلود</value>
+  </data>
+  <data name="UseAnotherServiceToLogIn" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserEmailIsNotConfirmed" xml:space="preserve">
+    <value>ایمیل شما تایید نشده است</value>
+  </data>
+  <data name="UserNotFound" xml:space="preserve">
+    <value>کاربر پیدا نشد</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>کاربران</value>
+  </data>
+  <data name="Verify" xml:space="preserve">
+    <value>تایید</value>
+  </data>
+  <data name="VerifyPhoneNumber" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WaitSeconds" xml:space="preserve">
+    <value>انتظار (ثانیه)</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>چهارشنبه</value>
+  </data>
+  <data name="WeekView" xml:space="preserve">
+    <value>نمایش (هفته)</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>خوش آمدید</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>بله</value>
+  </data>
+  <data name="YouHaveNotLocalAccountMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="YouNeedConfirmedEmailToLogin" xml:space="preserve">
+    <value />
+  </data>
+  <data name="YourBrowserDoesNotSupportVideoTag" xml:space="preserve">
+    <value />
+  </data>
+  <data name="YourPasswordChanged" xml:space="preserve">
+    <value />
+  </data>
+  <data name="YourPasswordHasBeenSet" xml:space="preserve">
+    <value />
+  </data>
+  <data name="YourPasswordHasResetMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="YourPhoneNumberAdded" xml:space="preserve">
+    <value />
+  </data>
+  <data name="YourPhoneNumberRemoved" xml:space="preserve">
+    <value />
+  </data>
+  <data name="YourSecurityCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="YouSuccessfullyAuthenticatedWithProvider" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>خروج</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>تصاویر</value>
+  </data>
+  <data name="Videos" xml:space="preserve">
+    <value>ویدیوها</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>فایل</value>
+  </data>
+  <data name="Ready" xml:space="preserve">
+    <value>آماده</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Latitude" xml:space="preserve">
+    <value>عرض جغرافیایی</value>
+  </data>
+  <data name="Longitude" xml:space="preserve">
+    <value>طول جغرافیایی</value>
+  </data>
+  <data name="ScheduleDevice" xml:space="preserve">
+    <value>زمانبندی دستگاه</value>
+  </data>
+  <data name="PageHelpMessage_Content_Index_ForAdvertiser" xml:space="preserve">
+    <value>کاربر گرامی، در این صفحه میتوانید تبلیغات خود را مشاهده کنید. برای آپلود تبلیغ جدید، دکمه «افزودن محتوا» را کلیک کنید. لطفا توجه داشته باشید که این تبلیغات تنها بعد از تایید توسط مدیران سازمان روی دستگاه ها پخش خواهد شد.</value>
+  </data>
+  <data name="PlayAdvertisement" xml:space="preserve">
+    <value>نمایش تبلیغات</value>
+  </data>
+  <data name="Advertisements" xml:space="preserve">
+    <value>تبلیغات</value>
+  </data>
+  <data name="DeviceId" xml:space="preserve">
+    <value>شناسه دستگاه</value>
+  </data>
+  <data name="AllowAdvertisementsInThisTimeBox" xml:space="preserve">
+    <value>تبلیغ دهندگان مجاز به انتخاب این زمانبندی باشند</value>
+  </data>
+  <data name="ContentsDurationExceededTimeBoxDuration" xml:space="preserve">
+    <value>مجموع زمان پخش تبلیغات انتخاب شده بیشتر از محدوده این زمانبندی است. لطفا زمان پخش برخی از تبلیغات را کاهش دهید و یا بعضی از تبلیغات را انتخاب نکنید.</value>
+  </data>
+  <data name="PageHelpMessage_AdsDevices_Index" xml:space="preserve">
+    <value>لطفا دستگاهی را که مایلید تبلیغات شما روی آن پخش شود را انتخاب نمایید </value>
+  </data>
+  <data name="Schedule" xml:space="preserve">
+    <value>زمانبندی</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>روز</value>
+  </data>
+  <data name="FreeTime" xml:space="preserve">
+    <value>زمان آزاد</value>
+  </data>
+  <data name="PageHelpMessage_AdsTimeBox_Index" xml:space="preserve">
+    <value>لطفا ابتدا یک زمانبندی و سپس تبلیغات مورد نظر خود را انتخاب نمایید. لطفا دقت بفرمایید که زمانبندی، زمان خالی برای پخش تبلیغات مورد نظر شما را داشته باشد.</value>
+  </data>
+  <data name="Sec" xml:space="preserve">
+    <value>ثانیه</value>
+  </data>
+  <data name="Used" xml:space="preserve">
+    <value>استفاده شده</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>زبان</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>انگلیسی</value>
+  </data>
+  <data name="Farsi" xml:space="preserve">
+    <value>فارسی</value>
+  </data>
+  <data name="GroupScheduling" xml:space="preserve">
+    <value>زمانبندی گروهی</value>
+  </data>
+  <data name="SaveGroupScheduling" xml:space="preserve">
+    <value>ذخیره زمانبندی گروهی</value>
+  </data>
+  <data name="LoadDeviceScheduling" xml:space="preserve">
+    <value>بارگذاری زمانبندی دستگاه</value>
+  </data>
+  <data name="MsgStringLengthRange" xml:space="preserve">
+    <value>طول فیلد {0} باید بین {1} و {2} باشد</value>
+  </data>
+  <data name="Allowed" xml:space="preserve">
+    <value>مجاز</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>غیر فعال</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>فعال</value>
+  </data>
+  <data name="NotAllowed" xml:space="preserve">
+    <value>غیر مجاز</value>
+  </data>
+  <data name="TenantAdvertisementStatus" xml:space="preserve">
+    <value>تبلیغات</value>
+  </data>
+  <data name="ContactAdminToEnableAdsForYourTenant" xml:space="preserve">
+    <value>پخش تبلیغات برای سازمان شما غیرفعال است.</value>
+  </data>
+  <data name="PlayingAdsForThisTenantIsDisabled" xml:space="preserve">
+    <value>نمایش تبلیغات برای این سازمان غیرفعال است.</value>
+  </data>
+</root>

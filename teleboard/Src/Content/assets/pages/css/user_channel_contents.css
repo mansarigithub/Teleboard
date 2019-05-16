@@ -1,0 +1,15 @@
+@media(max-width:576px) {
+    .all-contents .card-block {
+        padding: 5px !important;
+    }
+
+    .all-contents .col-6, .all-contents .col-12 {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .all-contents .row {
+        margin-right: -5px;
+        margin-left: -5px;
+    }
+}

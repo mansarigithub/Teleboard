@@ -1,0 +1,32 @@
+[
+  {
+    "outputFileName": "Content/assets/layouts/material/css/style.min.css",
+    "inputFiles": [
+      "Content/assets/layouts/material/css/style.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/assets/layouts/material/js/custom.min.js",
+    "inputFiles": [
+      "Content/assets/layouts/material/js/custom.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/assets/layouts/material/plugins/toast-master/js/jquery.toast.min.js",
+    "inputFiles": [
+      "Content/assets/layouts/material/plugins/toast-master/js/jquery.toast.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/assets/layouts/material/plugins/toast-master/css/jquery.toast.min.css",
+    "inputFiles": [
+      "Content/assets/layouts/material/plugins/toast-master/css/jquery.toast.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/assets/pages/scripts/user_timebox_index.min.js",
+    "inputFiles": [
+      "Content/assets/pages/scripts/user_timebox_index.js"
+    ]
+  }
+]

@@ -1,0 +1,82 @@
+﻿@using Teleboard.PresentationModel.Model.Content;
+@model IEnumerable<ContentPM>
+@{
+    ViewBag.Title = Resources.ApproveContent;
+}
+
+<div class="row">
+@foreach (var item in Model)
+{
+    <div class="col-md-6" >
+        <div class="card">
+            <div class="card-block card-body">
+                <div class="row">
+                    <div class="col-12 col-md-6 ">
+                        @(Html.Partial("_ContentThumbnail", item))
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group form-group-wait display-none">
+                            <label for="company">@Resources.WaitSeconds</label>
+                            <input type="number" class="form-control delay-input" value="10" data-content-id="1057">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">@Resources.FileSizeInMegaBytes</label>
+                            <input type="text" class="form-control" value="@item.FileSizeString" disabled="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">@Resources.Description</label>
+                            <input type="text" class="form-control" value="@item.Description" disabled="">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12">
+                        <h4 class="text-center m-t-20">
+                            <span class="badge badge-success" title="@Resources.Tenant">@item.TenantName</span>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                @Html.ActionLink(Resources.Approve, "ContentApprove", new { id = item.Id }, new { @class = "btn btn-success" })
+                @Html.ActionLink(Resources.Edit, "Edit", "Contents", new { id = item.Id }, new { @class = "btn btn-info" })
+            </div>
+        </div>
+    </div>
+}
+
+</div>
+
+@if (Model.Count() == 0)
+{
+    <div class="card">
+        <div class="card-block">
+            @Resources.NoContentsToApprove
+        </div>
+    </div>
+}
+
+@section pageHelp {
+    <div class="alert alert-success alert-dismissible fade hide page-help" role="alert" data-page-name="approval-index">
+    <table>
+        <tr>
+            <td>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </td>
+            <td>
+                <p>@Resources.PageHelpMessage_Approval_Index</p>
+            </td>
+        </tr>
+      </table>
+</div>
+}
+
+@section BreadcrumbItems {
+
+    <li class="breadcrumb-item">
+        <a href="#">@Resources.ApproveContent</a>
+    </li>
+}

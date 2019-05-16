@@ -1,0 +1,154 @@
+﻿@model Teleboard.Models.ChannelContentViewModel
+@using Teleboard.PresentationModel.Model.Content;
+@using Teleboard.Common.ExtensionMethod;
+@using Teleboard.Mapper.Core
+@using Teleboard.Common.Media;
+@using Teleboard.Common.Enum;
+
+@{
+    ViewBag.Title = Resources.ChannelContents;
+    var path = HttpContext.Current.Request.ApplicationPath.TrimEnd('/');
+}
+@Html.Hidden("channelId", Model.Channel.Id)
+<div class="all-contents">
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    @Resources.AllContents
+                    <div class="float-right">
+                        <a href="/Contents/Create"><i class="btn btn-sm btn-primary icon-plus">&nbsp @Resources.Add</i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="allContents">
+                @foreach (var item in Model.AvailableContents)
+                {
+                    @RenderContentPanel(item, false, Model.Channel.Id, Model.DefaultDelaySeconds)
+                }
+            </div>
+
+        </div>
+
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    @Resources.SelectedContentsForDisplayingInChannel
+                </div>
+            </div>
+
+            <div id="selectedContents">
+                @foreach (var item in Model.SelectedContents)
+                {
+                    @RenderContentPanel(item.GetContentPM(), true, Model.Channel.Id, item.DelaySeconds.Value)
+                }
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section pageHelp {
+    <div class="alert alert-success alert-dismissible fade hide page-help" role="alert" data-page-name="channels-index">
+    <table>
+        <tr>
+            <td>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </td>
+            <td>
+                <p>@Resources.PageHelpMessage_Channel_Contents</p>
+            </td>
+        </tr>
+        </table>
+</div>
+}
+
+@section BreadcrumbItems {
+    <li class="breadcrumb-item"><a href="/Channels">@Resources.Channels</a></li>
+    <li class="breadcrumb-item"><a href="/Channels/Edit/@Model.Channel.Id">@Model.Channel.Name</a> <span>(@Model.Channel.TenantName)</span></li>
+    <li class="breadcrumb-item active">@Resources.Contents</li>
+}
+
+@helper RenderContentPanel(ContentPM item, bool selected, int channelId, int delay)
+{
+    <div class="card content-box"
+         data-contentid="@item.Id"
+         data-channelid="@channelId"
+         data-tenantid="@item.TenantId"
+         data-selected="@selected">
+        <div class="card-block card-body">
+            @{
+                var contentType = Model.ContentTypes.FirstOrDefault(o => o.Id == item.ContentTypeId).Name.ToLower();
+                var isVideoContent = item.ResourceType == ResourceType.Video;
+            }
+            <div class="row">
+                <div class="col-12 col-md-6 ">
+                    @Html.Partial("_ContentThumbnail", item)
+
+                    @if (!item.Flag.HasValue || !item.Flag.Value)
+                    {
+                        <div class="text-center" style="margin-top:10px">
+                            <span class="badge badge-danger">@Resources.NotApproved</span>
+                        </div>
+                    }
+
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="form-group form-group-wait @(!selected ? "display-none" : "")">
+                        <label for="company">@Resources.WaitSeconds</label>
+                        <input type="number" class="form-control delay-input"
+                               value="@(selected ? delay : (isVideoContent ? item.Duration.Value: Model.DefaultDelaySeconds))" @(isVideoContent ? "disabled" : "")
+                               data-content-id="@item.Id">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">@Resources.FileSizeInMegaBytes</label>
+                        <input type="text" class="form-control" value="@(item.FileSize.HasValue ? item.FileSize.Value.ToFileSizeString() : "-")" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">@Resources.Description</label>
+                        <input type="text" class="form-control" value="@item.Description" disabled>
+                    </div>
+
+                    @if (item.ResourceType == Teleboard.Common.Enum.ResourceType.Video)
+                    {
+                        <div class="form-group">
+                            <label for="company">@Resources.Duration</label>
+                            <input type="text" class="form-control" value="@(item.Duration.HasValue ? MediaHelper.ToDurationString(item.Duration.Value) : "0")" disabled>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <button type="button" class="btn btn-success" onclick="toggleSelect(this, @item.Id, @channelId, @item.TenantId)">
+                <i class="fa fa-exchange"></i>&nbsp; @Resources.Move
+            </button>
+
+            <button type="button" class="move-up btn btn-primary float-right @(!selected ? "display-none" : "")">
+                <i class="fa fa-arrow-up"></i>&nbsp; @Resources.MoveUp
+            </button>
+            <button type="button" class="move-down btn btn-primary float-right @(!selected ? "display-none" : "")">
+                <i class="fa fa-arrow-down"></i>&nbsp; @Resources.MoveDown
+            </button>
+        </div>
+    </div>
+}
+
+@section ComponentScripts{
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Content/assets/pages/scripts/user_channel_content.js"></script>
+}
+
+@section styles{
+    <link href="~/Content/assets/pages/css/user_channel_contents.css" rel="stylesheet" />
+}

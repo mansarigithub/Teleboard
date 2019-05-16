@@ -1,0 +1,73 @@
+﻿@model Teleboard.DomainModel.Core.TimeBox
+
+@{
+    ViewBag.Title = Resources.Details;
+}
+
+<h2>@Resources.Details</h2>
+
+<div>
+    <h4>@Resources.TimeBox</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DeviceId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeviceId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChannelId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChannelId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeekDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeekDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FromHour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FromHour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FromMinute)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FromMinute)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToHour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToHour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToMinute)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToMinute)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(Resources.BackToList, "Index")
+</p>

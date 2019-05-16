@@ -1,0 +1,9 @@
+﻿
+@{
+    if (!this.Request.Path.ToLower().StartsWith("/account"))
+    {
+        Layout = (User as Teleboard.DomainModel.Core.ApplicationUser).Language == Teleboard.Common.Enum.Language.English ?
+            "~/Views/Shared/_Layout.cshtml" :
+            "~/Views/Shared/_Layout_RTL.cshtml";
+    }
+}

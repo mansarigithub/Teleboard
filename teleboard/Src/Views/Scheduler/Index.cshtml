@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = Resources.Scheduler;
+}
+<table id="grid" style="display:none"></table>
+
+@*<div class="card">
+        <div class="card-block">
+        </div>
+    </div>*@
+
+@section pageHelp {
+    <div class="alert alert-success alert-dismissible fade hide page-help" role="alert" data-page-name="device-index">
+        <table>
+            <tr>
+                <td>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </td>
+                <td>
+                    <p>@Resources.PageHelpMessage_Schedule_Index</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+}
+
+@section BreadcrumbMenu {
+    <a href="#" class="btn btn-primary waves-effect waves-ligh disabled" id="groupSchedulingButton"><span class="btn-label"><i class="fa fa-object-group"></i></span>@Resources.GroupScheduling</a>
+    <a href="/Scheduler/Create" class="btn btn-primary waves-effect waves-light "><span class="btn-label"><i class="fa fa-plus"></i></span>@Resources.AddANewDevice</a>
+}
+
+@section BreadcrumbItems {
+    <li class="breadcrumb-item">
+        <a href="#">@Resources.Scheduler</a>
+    </li>
+}
+
+@section scripts {
+    <script src="~/Scripts/gijgo/modular/core.min.js"></script>
+    <script src="~/Scripts/gijgo/modular/grid.min.js"></script>
+    <script src="~/Scripts/gijgo/modular/checkbox.min.js"></script>
+    <script src="~/Scripts/gijgo/combined/messages/messages.fa-ir.js"></script>
+
+    <script src="~/content/assets/pages/scripts/user_device_index.js"></script>
+    <script src="~/Scripts/component-customized-scripts.js"></script>
+}
+
+@section styles {
+    <link href="~/Content/gijgo/modular/core.css" rel="stylesheet" />
+    <link href="~/Content/gijgo/modular/grid.min.css" rel="stylesheet" />
+    <link href="~/Content/gijgo/modular/checkbox.min.css" rel="stylesheet" />
+    <link href="~/Content/assets/pages/css/user_device_index.css" rel="stylesheet" />
+}

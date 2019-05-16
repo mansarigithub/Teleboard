@@ -1,0 +1,881 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountCreatedEmailBody" xml:space="preserve">
+    <value>Your account has been created. Please reset your password by clicking here: &lt;a href="{0}"&gt;link&lt;/a&gt;"</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddChannel" xml:space="preserve">
+    <value>Add Channel</value>
+  </data>
+  <data name="AddNewRole" xml:space="preserve">
+    <value>Add New Role</value>
+  </data>
+  <data name="AddNewUser" xml:space="preserve">
+    <value>Add New User</value>
+  </data>
+  <data name="Administration" xml:space="preserve">
+    <value>Administration</value>
+  </data>
+  <data name="AllContents" xml:space="preserve">
+    <value>All Contents</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>Teleboard</value>
+  </data>
+  <data name="Approval" xml:space="preserve">
+    <value>Approval</value>
+  </data>
+  <data name="Approve" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="AreYouSureYouWantToApproveThis" xml:space="preserve">
+    <value>Are you sure you want to Approve this?</value>
+  </data>
+  <data name="BackToList" xml:space="preserve">
+    <value>Back to List</value>
+  </data>
+  <data name="CannotAddRolesToUser" xml:space="preserve">
+    <value>Cannot add role(s) to the user</value>
+  </data>
+  <data name="CannotAddTenantsToUser" xml:space="preserve">
+    <value>Cannot add tenant(s) to the user</value>
+  </data>
+  <data name="Channel" xml:space="preserve">
+    <value>Channel</value>
+  </data>
+  <data name="Channels" xml:space="preserve">
+    <value>Channels</value>
+  </data>
+  <data name="ConfirmAccountEmailBody" xml:space="preserve">
+    <value>Please confirm your account by clicking &lt;a href="{0}"&gt;here&lt;/a&gt;</value>
+  </data>
+  <data name="ConfirmYourAccount" xml:space="preserve">
+    <value>Confirm Your Account</value>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="Contents" xml:space="preserve">
+    <value>Contents</value>
+  </data>
+  <data name="ContentsOfChannel" xml:space="preserve">
+    <value>Contents Of Channel</value>
+  </data>
+  <data name="ContentTypeNotDefined" xml:space="preserve">
+    <value>Content Type Not Defined</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="DeviceIdentifierIsDuplicate" xml:space="preserve">
+    <value>This device identifier is used for another device, please use a diffrent device identifier.</value>
+  </data>
+  <data name="DuplicateChannelName" xml:space="preserve">
+    <value>A channel with this name  exist, please enter a diffrent name</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EditRole" xml:space="preserve">
+    <value>Edit Role</value>
+  </data>
+  <data name="EditUser" xml:space="preserve">
+    <value>Edit User</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailConfirmationFailed" xml:space="preserve">
+    <value>Cannot create confirmation email</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ErrorOccurred" xml:space="preserve">
+    <value>An error has occurred</value>
+  </data>
+  <data name="ExternalLoginRemoved" xml:space="preserve">
+    <value>The external login was removed</value>
+  </data>
+  <data name="FileSizeInMegaBytes" xml:space="preserve">
+    <value>File Size</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+  <data name="InvalidCode" xml:space="preserve">
+    <value>Invalid code.</value>
+  </data>
+  <data name="InvalidLoginAttempt" xml:space="preserve">
+    <value>Invalid login attempt.</value>
+  </data>
+  <data name="LastConnectivity" xml:space="preserve">
+    <value>Last Connectivity</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Log In</value>
+  </data>
+  <data name="Management" xml:space="preserve">
+    <value>Management</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+  <data name="Move" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="MoveDown" xml:space="preserve">
+    <value>Move Down</value>
+  </data>
+  <data name="MoveUp" xml:space="preserve">
+    <value>Move Up</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NewKey" xml:space="preserve">
+    <value>NewValue</value>
+  </data>
+  <data name="NoContentsToApprove" xml:space="preserve">
+    <value>No Contents to approve</value>
+  </data>
+  <data name="NotApproved" xml:space="preserve">
+    <value>Not approved</value>
+  </data>
+  <data name="PleaseApproveContents" xml:space="preserve">
+    <value>Please Login Teleboard And Approve Contents which are pending for approval. Thank You!</value>
+  </data>
+  <data name="PleaseCreateAChannel" xml:space="preserve">
+    <value>Please create a channel first.</value>
+  </data>
+  <data name="RegisterationDate" xml:space="preserve">
+    <value>Registeration Date</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>Reset Password</value>
+  </data>
+  <data name="ResetPasswordEmailBody" xml:space="preserve">
+    <value>Please reset your password by clicking here: &lt;a href="{0}"&gt;Reset Password&lt;/a&gt;</value>
+  </data>
+  <data name="ResetPasswordToDefault" xml:space="preserve">
+    <value>Reset Password To Default</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Security" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="SelectedContentsForDisplayingInChannel" xml:space="preserve">
+    <value>Selected contents for displaying in channel</value>
+  </data>
+  <data name="SignInToYourAccount" xml:space="preserve">
+    <value>Sign in to your account</value>
+  </data>
+  <data name="SignUp" xml:space="preserve">
+    <value>Sign Up</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="TenantName" xml:space="preserve">
+    <value>Tenant Name</value>
+  </data>
+  <data name="Tenants" xml:space="preserve">
+    <value>Tenants</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>Thursday</value>
+  </data>
+  <data name="TimeBox" xml:space="preserve">
+    <value>Time Box</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>Tuesday</value>
+  </data>
+  <data name="TwoFactorAuthenticationHasBeenSet" xml:space="preserve">
+    <value>Your two-factor authentication provider has been set.</value>
+  </data>
+  <data name="UserNotFound" xml:space="preserve">
+    <value>User not found or email has not been confirmed</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="WaitSeconds" xml:space="preserve">
+    <value>Wait Seconds</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>Wednesday</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="YouNeedConfirmedEmailToLogin" xml:space="preserve">
+    <value>You must have a confirmed email to log in.</value>
+  </data>
+  <data name="YourBrowserDoesNotSupportVideoTag" xml:space="preserve">
+    <value>Your browser does not support the video tag.</value>
+  </data>
+  <data name="YourPasswordChanged" xml:space="preserve">
+    <value>Your password has been changed</value>
+  </data>
+  <data name="YourPasswordHasBeenSet" xml:space="preserve">
+    <value>Your password has been set</value>
+  </data>
+  <data name="YourPhoneNumberAdded" xml:space="preserve">
+    <value>Your phone number was added</value>
+  </data>
+  <data name="YourPhoneNumberRemoved" xml:space="preserve">
+    <value>Your phone number was removed</value>
+  </data>
+  <data name="YourSecurityCode" xml:space="preserve">
+    <value>Your security code is: </value>
+  </data>
+  <data name="AddNewChannel" xml:space="preserve">
+    <value>Add a new channel</value>
+  </data>
+  <data name="AreYouSureToDelete" xml:space="preserve">
+    <value>Are you sure you want to delete this?</value>
+  </data>
+  <data name="ChannelDetails" xml:space="preserve">
+    <value>Channel Details</value>
+  </data>
+  <data name="DeleteChannel" xml:space="preserve">
+    <value>Delete Channel</value>
+  </data>
+  <data name="DeleteThisChannel" xml:space="preserve">
+    <value>Delete This Channel</value>
+  </data>
+  <data name="EditChannel" xml:space="preserve">
+    <value>Edit Channel</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="Tenant" xml:space="preserve">
+    <value>Tenant</value>
+  </data>
+  <data name="AddNewConnectionType" xml:space="preserve">
+    <value>Add New Connection Type</value>
+  </data>
+  <data name="ConnectionType" xml:space="preserve">
+    <value>ConnectionType</value>
+  </data>
+  <data name="ConnectionTypes" xml:space="preserve">
+    <value>Connection Types</value>
+  </data>
+  <data name="AddContent" xml:space="preserve">
+    <value>Add Content</value>
+  </data>
+  <data name="AccountConfirmationEmailSent" xml:space="preserve">
+    <value>Email account confirmation sent. Please confirm before login</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="AddANewDevice" xml:space="preserve">
+    <value>Add A New Device</value>
+  </data>
+  <data name="AddAPhoneNumber" xml:space="preserve">
+    <value>Add A Phone Number</value>
+  </data>
+  <data name="AddDevice" xml:space="preserve">
+    <value>AddDevice</value>
+  </data>
+  <data name="AddNewContentType" xml:space="preserve">
+    <value>Add New Content Type</value>
+  </data>
+  <data name="AddNewTenant" xml:space="preserve">
+    <value>Add New Tenant</value>
+  </data>
+  <data name="AddNewTranslate" xml:space="preserve">
+    <value>Add New Translate</value>
+  </data>
+  <data name="AddTenant" xml:space="preserve">
+    <value>Add Tenant</value>
+  </data>
+  <data name="AssociateYourLoginProviderAccount" xml:space="preserve">
+    <value>Associate your {0} account</value>
+  </data>
+  <data name="AssociationForm" xml:space="preserve">
+    <value>Association Form</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="ChangePasswordForm" xml:space="preserve">
+    <value>Change Password Form</value>
+  </data>
+  <data name="ChangeYourAccountSettings" xml:space="preserve">
+    <value>Change your account settings</value>
+  </data>
+  <data name="ChangeYourPassword" xml:space="preserve">
+    <value>Change your password</value>
+  </data>
+  <data name="CheckYourEmailToResetPassword" xml:space="preserve">
+    <value>Please check your email (and your spam box) to reset your password</value>
+  </data>
+  <data name="ConfirmEmail" xml:space="preserve">
+    <value>Confirm Email</value>
+  </data>
+  <data name="ContentType" xml:space="preserve">
+    <value>Content Type</value>
+  </data>
+  <data name="ContentTypes" xml:space="preserve">
+    <value>Content Types</value>
+  </data>
+  <data name="CreateLocalLogin" xml:space="preserve">
+    <value>Create Local Login</value>
+  </data>
+  <data name="CreateNewAccount" xml:space="preserve">
+    <value>Create A New Account</value>
+  </data>
+  <data name="CreatePassword" xml:space="preserve">
+    <value>Create Password</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="DayView" xml:space="preserve">
+    <value>Day View</value>
+  </data>
+  <data name="DeleteThisDevice" xml:space="preserve">
+    <value>Delete This Device</value>
+  </data>
+  <data name="Device" xml:space="preserve">
+    <value>Device</value>
+  </data>
+  <data name="DeviceDetails" xml:space="preserve">
+    <value>Device Details</value>
+  </data>
+  <data name="Devices" xml:space="preserve">
+    <value>Devices</value>
+  </data>
+  <data name="EditDevice" xml:space="preserve">
+    <value>Edit Device</value>
+  </data>
+  <data name="EmailResetLink" xml:space="preserve">
+    <value>Email Reset Link</value>
+  </data>
+  <data name="EnterVerificationCode" xml:space="preserve">
+    <value>Enter Verification Code</value>
+  </data>
+  <data name="ExternalAuthenticationConfigurationMessage" xml:space="preserve">
+    <value>There are no external authentication services configured. See &lt;a href="http://go.microsoft.com/fwlink/?LinkId=313242"&gt;this article&lt;/a&gt;
+                for details on setting up this ASP.NET application to support logging in via external services.</value>
+  </data>
+  <data name="ExternalLogins" xml:space="preserve">
+    <value>External Logins</value>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>File Name</value>
+  </data>
+  <data name="ForgotPasswordConfirmation" xml:space="preserve">
+    <value>Forgot Password Confirmation</value>
+  </data>
+  <data name="DidYouForgetYourPassword" xml:space="preserve">
+    <value>Forgot your password?</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="LoginFailure" xml:space="preserve">
+    <value>Login Failure</value>
+  </data>
+  <data name="LoginUsingYourProvider" xml:space="preserve">
+    <value>Log in using your {0} account</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Manage</value>
+  </data>
+  <data name="ManageYourExternalLogins" xml:space="preserve">
+    <value>Manage your external logins</value>
+  </data>
+  <data name="ModerationOnChennal" xml:space="preserve">
+    <value>Moderation On Chennal</value>
+  </data>
+  <data name="ModerationOnContent" xml:space="preserve">
+    <value>Moderation On Content</value>
+  </data>
+  <data name="ModerationOnTimeBox" xml:space="preserve">
+    <value>Moderation On TimeBox</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NoContents" xml:space="preserve">
+    <value>No Contents</value>
+  </data>
+  <data name="NoTwoFactorAuthenticationProvidersConfigured" xml:space="preserve">
+    <value>There are no two-factor authentication providers configured. See &lt;a href="http://go.microsoft.com/fwlink/?LinkId=403804"&gt;this article&lt;/a&gt;
+                for details on setting up this ASP.NET application to support two-factor authentication.</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="Online" xml:space="preserve">
+    <value>Online</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="RegisteredLogins" xml:space="preserve">
+    <value>Registered Logins</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="ResetPasswordConfirmation" xml:space="preserve">
+    <value>Reset Password Confirmation</value>
+  </data>
+  <data name="ResetYourPassword" xml:space="preserve">
+    <value>Reset Your Password</value>
+  </data>
+  <data name="SaveThisTimeBox" xml:space="preserve">
+    <value>Save this time box</value>
+  </data>
+  <data name="SelectTaskForListBellow" xml:space="preserve">
+    <value>Select Task For List Bellow</value>
+  </data>
+  <data name="SelectTwoFactorAuthenticationProvider" xml:space="preserve">
+    <value>Select Two-Factor Authentication Provider</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="SendVerificationCode" xml:space="preserve">
+    <value>Send Verification Code</value>
+  </data>
+  <data name="SetPassword" xml:space="preserve">
+    <value>Set Password</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>Enter verification code</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>Login Failure</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="TanantName" xml:space="preserve">
+    <value>Tanant Name</value>
+  </data>
+  <data name="Task" xml:space="preserve">
+    <value>Task</value>
+  </data>
+  <data name="ThankYouForConfirmingEmailMessage" xml:space="preserve">
+    <value>Thank you for confirming your email, Please &lt;a id="loginLink" href="/Account/Login"&gt; Click here to Log in&lt;/a&gt;</value>
+  </data>
+  <data name="ThereAreNoExternalAuthenticationServicesConfigured" xml:space="preserve">
+    <value>There are no external authentication services configured. See &lt;a href="http://go.microsoft.com/fwlink/?LinkId=403804"&gt;this article&lt;/a&gt;
+                for details on setting up this ASP.NET application to support logging in via external services.</value>
+  </data>
+  <data name="TimeBoxes" xml:space="preserve">
+    <value>Time Boxes</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Translate" xml:space="preserve">
+    <value>Translate</value>
+  </data>
+  <data name="Translation" xml:space="preserve">
+    <value>Translation</value>
+  </data>
+  <data name="TwoFactorAuthentication" xml:space="preserve">
+    <value>Two Factor Authentication</value>
+  </data>
+  <data name="UnsuccessfulLoginWithService" xml:space="preserve">
+    <value>Unsuccessful login with service</value>
+  </data>
+  <data name="UseAnotherServiceToLogIn" xml:space="preserve">
+    <value>Use another service to log in</value>
+  </data>
+  <data name="Verify" xml:space="preserve">
+    <value>Verify</value>
+  </data>
+  <data name="VerifyPhoneNumber" xml:space="preserve">
+    <value>Verify Phone Number</value>
+  </data>
+  <data name="WeekView" xml:space="preserve">
+    <value>Week View</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="YouHaveNotLocalAccountMessage" xml:space="preserve">
+    <value>You do not have a local username/password for this site. Add a local
+ account so you can log in without an external login.</value>
+  </data>
+  <data name="YourPasswordHasResetMessage" xml:space="preserve">
+    <value>Your password has been reset.
+        Please &lt;a id = "loginLink" href="/Account/Login"&gt;click here to log in&lt;/a&gt;</value>
+  </data>
+  <data name="YouSuccessfullyAuthenticatedWithProvider" xml:space="preserve">
+    <value>You've successfully authenticated with &lt;strong&gt;{0}&lt;/strong&gt;.
+        Please enter a user name for this site below and click the Register button to finish
+        logging in.</value>
+  </data>
+  <data name="Log" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="ApproveContent" xml:space="preserve">
+    <value>Approve Content</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="InvalidSubscriptionCode" xml:space="preserve">
+    <value>InvalidSubscriptionCode</value>
+  </data>
+  <data name="Upload" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="UserEmailIsNotConfirmed" xml:space="preserve">
+    <value>User Email Is Not Confirmed</value>
+  </data>
+  <data name="TimeZone" xml:space="preserve">
+    <value>Time Zone</value>
+  </data>
+  <data name="EditContent" xml:space="preserve">
+    <value>Edit Content</value>
+  </data>
+  <data name="Logs" xml:space="preserve">
+    <value>Logs</value>
+  </data>
+  <data name="InvalidEmailForResetPassword" xml:space="preserve">
+    <value>This is an invalid email. please enter your account email.</value>
+  </data>
+  <data name="InvalidResetPasswordParameter" xml:space="preserve">
+    <value>Invalid reset password link</value>
+  </data>
+  <data name="PasswordChanged" xml:space="preserve">
+    <value>Password Changed</value>
+  </data>
+  <data name="DeviceTimeBox" xml:space="preserve">
+    <value>Device Time Box</value>
+  </data>
+  <data name="InvalidDateRange" xml:space="preserve">
+    <value>Invalid Date Range</value>
+  </data>
+  <data name="SupportedMimeTypes" xml:space="preserve">
+    <value>Supported Types</value>
+  </data>
+  <data name="SupportedMimeTypesMessage" xml:space="preserve">
+    <value>Only this type of files are supported. if you want upload a file that it's type is not appeared in this list, please contact your system administrator and ask him/her to add the file MIME type.</value>
+  </data>
+  <data name="ChannelContents" xml:space="preserve">
+    <value>Channel Contents</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="InvalidUserNameOrPassword" xml:space="preserve">
+    <value>Invalid user name or password</value>
+  </data>
+  <data name="MissingParameter" xml:space="preserve">
+    <value>missing parameter</value>
+  </data>
+  <data name="Scheduler" xml:space="preserve">
+    <value>Scheduler</value>
+  </data>
+  <data name="RemoveAllSchedulings" xml:space="preserve">
+    <value>Remove All Schedulings</value>
+  </data>
+  <data name="DidYouKnow" xml:space="preserve">
+    <value>Did you know?</value>
+  </data>
+  <data name="PageHelpMessage_Approval_Index" xml:space="preserve">
+    <value>In this page you can view contents that are pending to approve. these contents won't be played in devices until you approve them!</value>
+  </data>
+  <data name="PageHelpMessage_Channel_Contents" xml:space="preserve">
+    <value>In this page you can manage channel contents. all contents of your tenant are shown in the left column.  to add a content to the channel, click 'Move' button. after clicking 'Move' button, it will be added to contents of this channel.</value>
+  </data>
+  <data name="PageHelpMessage_Channel_Index" xml:space="preserve">
+    <value>In this page you can view your channels. to add contents to each channel, click 'Channel Contents' icon.</value>
+  </data>
+  <data name="PageHelpMessage_Content_Index" xml:space="preserve">
+    <value>In this page you can view your contents and approve them if you are administrator.</value>
+  </data>
+  <data name="PageHelpMessage_Scheduler_Create" xml:space="preserve">
+    <value>In this page you can add a device. please select device time zone based on your geographical location. contents will be played on this device based on local time of the device.&lt;br/&gt;
+enter 'DeviceId' that you have gotten from your device app.</value>
+  </data>
+  <data name="PageHelpMessage_Schedule_Index" xml:space="preserve">
+    <value>In this page you can view your devices and schedule them.</value>
+  </data>
+  <data name="PageHelpMessage_TimeBox_Index" xml:space="preserve">
+    <value>In this page you can schdule your device. select a date range for playing a channel. after selecting a date range, in the opened window select the channel that you want play in that period of time.</value>
+  </data>
+  <data name="AddRole" xml:space="preserve">
+    <value>Add Role</value>
+  </data>
+  <data name="AddUser" xml:space="preserve">
+    <value>Add User</value>
+  </data>
+  <data name="ContentApproval" xml:space="preserve">
+    <value>Content Approval</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>Images</value>
+  </data>
+  <data name="Videos" xml:space="preserve">
+    <value>Videos</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="Ready" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Latitude" xml:space="preserve">
+    <value>Latitude</value>
+  </data>
+  <data name="Longitude" xml:space="preserve">
+    <value>Longitude</value>
+  </data>
+  <data name="ScheduleDevice" xml:space="preserve">
+    <value>Schedule Device</value>
+  </data>
+  <data name="PageHelpMessage_Content_Index_ForAdvertiser" xml:space="preserve">
+    <value>Dear user, in this page you can see your uploaded advertisments. to add a new advertisment, click 'Add Content' button. please notice that your advertisments will play on devices only after approval.</value>
+  </data>
+  <data name="PlayAdvertisement" xml:space="preserve">
+    <value>Play Ads</value>
+  </data>
+  <data name="Advertisements" xml:space="preserve">
+    <value>Advertisements</value>
+  </data>
+  <data name="DeviceId" xml:space="preserve">
+    <value>Device Id</value>
+  </data>
+  <data name="AllowAdvertisementsInThisTimeBox" xml:space="preserve">
+    <value>Allow advertisers to select this schedule</value>
+  </data>
+  <data name="ContentsDurationExceededTimeBoxDuration" xml:space="preserve">
+    <value>Totall play duration of selected advertisements exceeded this schedule duration. please deselect some advertisements or reduce their play times.</value>
+  </data>
+  <data name="PageHelpMessage_AdsDevices_Index" xml:space="preserve">
+    <value>Please select the device that you want your advertisements play on it.</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="FreeTime" xml:space="preserve">
+    <value>Free Time</value>
+  </data>
+  <data name="PageHelpMessage_AdsTimeBox_Index" xml:space="preserve">
+    <value>Please select an enabled schedule and then choose advertisements to play on this device.</value>
+  </data>
+  <data name="Schedule" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="Sec" xml:space="preserve">
+    <value>Sec</value>
+  </data>
+  <data name="Used" xml:space="preserve">
+    <value>Used</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Farsi" xml:space="preserve">
+    <value>Farsi</value>
+  </data>
+  <data name="GroupScheduling" xml:space="preserve">
+    <value>Group Scheduling</value>
+  </data>
+  <data name="SaveGroupScheduling" xml:space="preserve">
+    <value>Save Group Scheduling</value>
+  </data>
+  <data name="LoadDeviceScheduling" xml:space="preserve">
+    <value>Load Device Scheduling</value>
+  </data>
+  <data name="MsgStringLengthRange" xml:space="preserve">
+    <value>length of field {0} must be between {1} and {2}</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="Allowed" xml:space="preserve">
+    <value>Allowed</value>
+  </data>
+  <data name="NotAllowed" xml:space="preserve">
+    <value>NotAllowed</value>
+  </data>
+  <data name="TenantAdvertisementStatus" xml:space="preserve">
+    <value>Advertisements</value>
+  </data>
+  <data name="ContactAdminToEnableAdsForYourTenant" xml:space="preserve">
+    <value>playing ads for your tenant is disabled.</value>
+  </data>
+  <data name="PlayingAdsForThisTenantIsDisabled" xml:space="preserve">
+    <value>Playing ads for this tenant is disabled</value>
+  </data>
+</root>

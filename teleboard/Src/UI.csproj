@@ -1,0 +1,1673 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2D4E369B-ADD4-4BEC-AD03-7F8A316003E7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Teleboard.UI</RootNamespace>
+    <AssemblyName>Teleboard.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>44313</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress>
+    </Use64BitIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.1.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.1.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.1.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.1.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SendGrid.SmtpApi, Version=1.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SendGrid.SmtpApi.1.3.3\lib\SendGrid.SmtpApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.3\lib\net45\System.Web.Http.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\ApplicationInitializer.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Attributes\LocalizedDisplayNameAttribute.cs" />
+    <Compile Include="Attributes\LocalizedRequiredAttribute.cs" />
+    <Compile Include="Controllers\AdsDevicesController.cs" />
+    <Compile Include="Controllers\AdsTimeBoxesController.cs" />
+    <Compile Include="Infrastructure\Globalization\AppLanguage.cs" />
+    <Compile Include="Models\AdsScheduleViewModel.cs" />
+    <Compile Include="WebApi\ApiBaseController.cs" />
+    <Compile Include="WebApi\V1\ApiDevicesController.cs" />
+    <Compile Include="WebApi\V1\ApiSignInController.cs" />
+    <Compile Include="WebApi\V1\ApiContentsController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ApprovalController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\ChannelsController.cs" />
+    <Compile Include="Controllers\ConnectionTypesController.cs" />
+    <Compile Include="Controllers\ContentsController.cs" />
+    <Compile Include="Controllers\ContentTypesController.cs" />
+    <Compile Include="Controllers\LogController.cs" />
+    <Compile Include="Controllers\SchedulerController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ApiController.cs" />
+    <Compile Include="Controllers\TenantsController.cs" />
+    <Compile Include="Controllers\TimeBoxesController.cs" />
+    <Compile Include="Controllers\TranslationController.cs" />
+    <Compile Include="Extensions\HtmlExtensions.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\ListItemHelper.cs" />
+    <Compile Include="Helper\SettingsHelper.cs" />
+    <Compile Include="Infrastructure\Mvc\SessionManager.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AdminViewModels.cs" />
+    <Compile Include="Models\ChannelIndexViewModel.cs" />
+    <Compile Include="Models\ChannelContentViewModel.cs" />
+    <Compile Include="Models\ContentEditViewModel.cs" />
+    <Compile Include="Models\ContentUploadViewModel.cs" />
+    <Compile Include="Models\ContentViewModel.cs" />
+    <Compile Include="Models\Device\DeviceScheduleViewModel.cs" />
+    <Compile Include="Models\DeviceChannelViewModel.cs" />
+    <Compile Include="Models\DeviceViewModel.cs" />
+    <Compile Include="Models\Device\EditDeviceViewModel.cs" />
+    <Compile Include="Models\Device\CreateDeviceViewModel.cs" />
+    <Compile Include="Models\ErrorPageModel.cs" />
+    <Compile Include="Extensions\IdentityModelExtension.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\TimeBoxViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\ImageResizer.cs" />
+    <Compile Include="Service\Translator.cs" />
+    <Compile Include="Service\MailService.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="WebApi\V1\DataContract\Enum.cs" />
+    <Compile Include="WebApi\V1\DataContract\ApiResponseData.cs" />
+    <Compile Include="WebApi\V1\Infrastructure\ApiAuthenticateAttribute.cs" />
+    <Compile Include="WebApi\V1\Infrastructure\ApiExceptionFilterAttribute.cs" />
+    <Compile Include="WebApi\V1\Infrastructure\ApiResult.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\assets\global\css\teleboard-ltr.css" />
+    <Content Include="Content\assets\global\css\teleboard-rtl.css" />
+    <Content Include="Content\assets\global\css\teleboard-common.css" />
+    <Content Include="Content\assets\global\app-plugins\contentThumbnail\contentThumbnail.js" />
+    <Content Include="Content\assets\global\app-plugins\contentThumbnail\contentThumbnail.css" />
+    <Content Include="Content\assets\global\scripts\teleboard.strings.fa.js" />
+    <Content Include="Content\assets\global\scripts\teleboard.strings.en.js" />
+    <Content Include="Content\assets\global\scripts\teleboard.js" />
+    <Content Include="Content\assets\layouts\material-rtl\css\animate.css" />
+    <Content Include="Content\assets\layouts\material-rtl\css\colors\blue-dark.css" />
+    <Content Include="Content\assets\layouts\material-rtl\css\colors\blue.css" />
+    <Content Include="Content\assets\layouts\material-rtl\css\colors\default-dark.css" />
+    <Content Include="Content\assets\layouts\material-rtl\css\colors\default.css" />
+    <Content Include="Content\assets\layouts\material-rtl\css\colors\green-dark.css" />
+    <Content Include="Content\assets\layouts\material-rtl\css\colors\green.css" />
+    <Content Include="Content\assets\layouts\material-rtl\css\colors\megna-dark.css" />
+    <Content Include="Content\assets\layouts\material-rtl\css\colors\megna.css" />
+    <Content Include="Content\assets\layouts\material-rtl\css\colors\purple-dark.css" />
+    <Content Include="Content\assets\layouts\material-rtl\css\colors\purple.css" />
+    <Content Include="Content\assets\layouts\material-rtl\css\colors\red-dark.css" />
+    <Content Include="Content\assets\layouts\material-rtl\css\colors\red.css" />
+    <Content Include="Content\assets\layouts\material-rtl\css\spinners.css" />
+    <Content Include="Content\assets\layouts\material-rtl\css\style.css" />
+    <Content Include="Content\assets\layouts\material-rtl\images\background\error-bg.jpg" />
+    <Content Include="Content\assets\layouts\material-rtl\images\background\login-register.jpg" />
+    <Content Include="Content\assets\layouts\material-rtl\images\background\megamenubg.jpg" />
+    <Content Include="Content\assets\layouts\material-rtl\images\background\profile-bg.jpg" />
+    <Content Include="Content\assets\layouts\material-rtl\images\background\socialbg.jpg" />
+    <Content Include="Content\assets\layouts\material-rtl\images\background\user-info.jpg" />
+    <Content Include="Content\assets\layouts\material-rtl\images\background\weatherbg.jpg" />
+    <Content Include="Content\assets\layouts\material-rtl\js\chat.js" />
+    <Content Include="Content\assets\layouts\material-rtl\js\custom.js" />
+    <Content Include="Content\assets\layouts\material-rtl\js\flot-data.js" />
+    <Content Include="Content\assets\layouts\material-rtl\js\footable-init.js" />
+    <Content Include="Content\assets\layouts\material-rtl\js\jasny-bootstrap.js" />
+    <Content Include="Content\assets\layouts\material-rtl\js\jquery.PrintArea.js" />
+    <Content Include="Content\assets\layouts\material-rtl\js\jquery.slimscroll.js" />
+    <Content Include="Content\assets\layouts\material-rtl\js\jsgrid-init.js" />
+    <Content Include="Content\assets\layouts\material-rtl\js\mask.js" />
+    <Content Include="Content\assets\layouts\material-rtl\js\morris-data.js" />
+    <Content Include="Content\assets\layouts\material-rtl\js\sidebarmenu.js" />
+    <Content Include="Content\assets\layouts\material-rtl\js\toastr.js" />
+    <Content Include="Content\assets\layouts\material-rtl\js\validation.js" />
+    <Content Include="Content\assets\layouts\material-rtl\js\validator.js" />
+    <Content Include="Content\assets\layouts\material-rtl\js\waves.js" />
+    <Content Include="Content\assets\layouts\material-rtl\js\widget-charts.js" />
+    <Content Include="Content\assets\layouts\material-rtl\js\widget-data.js" />
+    <Content Include="Content\assets\layouts\material\css\animate.css" />
+    <Content Include="Content\assets\layouts\material\css\colors\blue-dark.css" />
+    <Content Include="Content\assets\layouts\material\css\colors\blue.css" />
+    <Content Include="Content\assets\layouts\material\css\colors\default-dark.css" />
+    <Content Include="Content\assets\layouts\material\css\colors\default.css" />
+    <Content Include="Content\assets\layouts\material\css\colors\green-dark.css" />
+    <Content Include="Content\assets\layouts\material\css\colors\green.css" />
+    <Content Include="Content\assets\layouts\material\css\colors\megna-dark.css" />
+    <Content Include="Content\assets\layouts\material\css\colors\megna.css" />
+    <Content Include="Content\assets\layouts\material\css\colors\purple-dark.css" />
+    <Content Include="Content\assets\layouts\material\css\colors\purple.css" />
+    <Content Include="Content\assets\layouts\material\css\colors\red-dark.css" />
+    <Content Include="Content\assets\layouts\material\css\colors\red.css" />
+    <Content Include="Content\assets\layouts\material\css\icons\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\assets\layouts\material\css\icons\font-awesome\old\css\font-awesome.css" />
+    <Content Include="Content\assets\layouts\material\css\icons\simple-line-icons\css\simple-line-icons.css" />
+    <Content Include="Content\assets\layouts\material\css\icons\themify-icons\themify-icons.css" />
+    <Content Include="Content\assets\layouts\material\css\spinners.css" />
+    <Content Include="Content\assets\layouts\material\css\style.css" />
+    <Content Include="Content\assets\layouts\material\css\style.min.css">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
+    <Content Include="Content\assets\layouts\material\images\custom-select.png" />
+    <Content Include="Content\assets\layouts\material\images\favicon.png" />
+    <Content Include="Content\assets\layouts\material\images\logo-icon.png" />
+    <Content Include="Content\assets\layouts\material\images\logo-light-icon.png" />
+    <Content Include="Content\assets\layouts\material\images\logo-light-text-fa.png" />
+    <Content Include="Content\assets\layouts\material\images\logo-light-text.png" />
+    <Content Include="Content\assets\layouts\material\images\logo-text.png" />
+    <Content Include="Content\assets\layouts\material\images\users\1.jpg" />
+    <Content Include="Content\assets\layouts\material\images\users\profile.png" />
+    <Content Include="Content\assets\layouts\material\js\chat.js" />
+    <Content Include="Content\assets\layouts\material\js\custom.js" />
+    <Content Include="Content\assets\layouts\material\js\custom.min.js">
+      <DependentUpon>custom.js</DependentUpon>
+    </Content>
+    <Content Include="Content\assets\layouts\material\js\dashboard1.js" />
+    <Content Include="Content\assets\layouts\material\js\dashboard2.js" />
+    <Content Include="Content\assets\layouts\material\js\dashboard3.js" />
+    <Content Include="Content\assets\layouts\material\js\dashboard4.js" />
+    <Content Include="Content\assets\layouts\material\js\dashboard5.js" />
+    <Content Include="Content\assets\layouts\material\js\dashboard6.js" />
+    <Content Include="Content\assets\layouts\material\js\flot-data.js" />
+    <Content Include="Content\assets\layouts\material\js\footable-init.js" />
+    <Content Include="Content\assets\layouts\material\js\jasny-bootstrap.js" />
+    <Content Include="Content\assets\layouts\material\js\jquery.PrintArea.js" />
+    <Content Include="Content\assets\layouts\material\js\jquery.slimscroll.js" />
+    <Content Include="Content\assets\layouts\material\js\jsgrid-init.js" />
+    <Content Include="Content\assets\layouts\material\js\mask.js" />
+    <Content Include="Content\assets\layouts\material\js\morris-data.js" />
+    <Content Include="Content\assets\layouts\material\js\perfect-scrollbar.min.js" />
+    <Content Include="Content\assets\layouts\material\js\sidebarmenu.js" />
+    <Content Include="Content\assets\layouts\material\js\toastr.js" />
+    <Content Include="Content\assets\layouts\material\js\validation.js" />
+    <Content Include="Content\assets\layouts\material\js\validator.js" />
+    <Content Include="Content\assets\layouts\material\js\waves.js" />
+    <Content Include="Content\assets\layouts\material\js\widget-charts.js" />
+    <Content Include="Content\assets\layouts\material\js\widget-data.js" />
+    <Content Include="Content\assets\layouts\material\plugins\blockUI\jquery.blockUI.js" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-rtl-master\dist\css\bootstrap-rtl.min.css" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-rtl-master\dist\css\bootstrap-theme-rtl.min.css" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-rtl-master\dist\css\custom-bootstrap-rtl.css" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-rtl-master\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-rtl-master\dist\js\bootstrap-rtl.js" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-rtl-master\dist\js\bootstrap-rtl.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-rtl-master\src\css\bootstrap-rtl.css" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-rtl-master\src\css\bootstrap-theme-rtl.css" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-rtl-master\src\js\bootstrap-rtl.js" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-select\bootstrap-select.min.css" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-select\bootstrap-select.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-switch\bootstrap-switch.css" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-switch\bootstrap-switch.js" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-switch\bootstrap-switch.min.css" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-switch\bootstrap-switch.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-touchspin\dist\jquery.bootstrap-touchspin.css" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-touchspin\dist\jquery.bootstrap-touchspin.js" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-touchspin\dist\jquery.bootstrap-touchspin.min.css" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-touchspin\dist\jquery.bootstrap-touchspin.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-touchspin\src\jquery.bootstrap-touchspin.css" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-touchspin\src\jquery.bootstrap-touchspin.js" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\4.0.0-beta\css\bootstrap-grid.css" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\4.0.0-beta\css\bootstrap-grid.min.css" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\4.0.0-beta\css\bootstrap-reboot.css" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\4.0.0-beta\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\4.0.0-beta\css\bootstrap.css" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\4.0.0-beta\css\bootstrap.min.css" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\4.0.0-beta\js\bootstrap.js" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\4.0.0-beta\js\bootstrap.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\4.0.0-beta\js\popper.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\js\popper.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\js\tether.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\c3-master\c3.min.css" />
+    <Content Include="Content\assets\layouts\material\plugins\c3-master\c3.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\clockpicker\dist\bootstrap-clockpicker.css" />
+    <Content Include="Content\assets\layouts\material\plugins\clockpicker\dist\bootstrap-clockpicker.js" />
+    <Content Include="Content\assets\layouts\material\plugins\clockpicker\dist\bootstrap-clockpicker.min.css" />
+    <Content Include="Content\assets\layouts\material\plugins\clockpicker\dist\bootstrap-clockpicker.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\clockpicker\dist\jquery-clockpicker.css" />
+    <Content Include="Content\assets\layouts\material\plugins\clockpicker\dist\jquery-clockpicker.js" />
+    <Content Include="Content\assets\layouts\material\plugins\clockpicker\dist\jquery-clockpicker.min.css" />
+    <Content Include="Content\assets\layouts\material\plugins\clockpicker\dist\jquery-clockpicker.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\fancybox\ekko-lightbox.min.css" />
+    <Content Include="Content\assets\layouts\material\plugins\fancybox\ekko-lightbox.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\flot.tooltip\js\excanvas.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\flot.tooltip\js\jquery.flot.js" />
+    <Content Include="Content\assets\layouts\material\plugins\flot.tooltip\js\jquery.flot.tooltip.js" />
+    <Content Include="Content\assets\layouts\material\plugins\flot.tooltip\js\jquery.flot.tooltip.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\flot.tooltip\js\jquery.flot.tooltip.source.js" />
+    <Content Include="Content\assets\layouts\material\plugins\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\assets\layouts\material\plugins\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\assets\layouts\material\plugins\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\assets\layouts\material\plugins\jquery\jquery.3.2.0.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\knob\jquery.knob.js" />
+    <Content Include="Content\assets\layouts\material\plugins\knob\jquery.knob.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\min\locales.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\min\locales.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\min\moment-timezone-with-data.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\min\moment-with-locales.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\min\moment-with-locales.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\min\moment.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\min\tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\moment.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\create\check-overflow.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\create\date-from-array.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\create\from-anything.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\create\from-array.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\create\from-object.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\create\from-string-and-array.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\create\from-string-and-format.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\create\from-string.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\create\local.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\create\parsing-flags.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\create\utc.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\create\valid.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\duration\abs.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\duration\add-subtract.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\duration\as.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\duration\bubble.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\duration\constructor.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\duration\create.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\duration\duration.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\duration\get.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\duration\humanize.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\duration\iso-string.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\duration\prototype.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\format\format.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\locale\calendar.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\locale\constructor.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\locale\en.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\locale\formats.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\locale\invalid.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\locale\lists.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\locale\locale.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\locale\locales.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\locale\ordinal.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\locale\pre-post-format.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\locale\prototype.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\locale\relative.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\locale\set.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\moment\add-subtract.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\moment\calendar.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\moment\clone.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\moment\compare.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\moment\constructor.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\moment\diff.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\moment\format.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\moment\from.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\moment\get-set.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\moment\locale.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\moment\min-max.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\moment\moment.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\moment\prototype.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\moment\start-end-of.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\moment\to-type.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\moment\to.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\moment\valid.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\parse\regex.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\parse\token.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\units\aliases.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\units\constants.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\units\day-of-month.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\units\day-of-week.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\units\day-of-year.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\units\hour.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\units\millisecond.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\units\minute.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\units\month.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\units\offset.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\units\quarter.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\units\second.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\units\timestamp.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\units\timezone.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\units\units.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\units\week-year.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\units\week.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\units\year.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\utils\abs-ceil.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\utils\abs-floor.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\utils\compare-arrays.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\utils\defaults.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\utils\deprecate.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\utils\extend.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\utils\has-own-prop.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\utils\hooks.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\utils\is-array.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\utils\is-date.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\utils\map.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\utils\to-int.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\lib\utils\zero-fill.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\af.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\ar-ma.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\ar-sa.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\ar-tn.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\ar.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\az.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\be.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\bg.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\bn.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\bo.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\br.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\bs.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\ca.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\cs.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\cv.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\cy.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\da.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\de-at.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\de.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\el.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\en-au.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\en-ca.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\en-gb.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\eo.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\es.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\et.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\eu.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\fa.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\fi.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\fo.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\fr-ca.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\fr.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\fy.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\gl.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\he.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\hi.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\hr.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\hu.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\hy-am.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\id.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\is.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\it.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\ja.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\jv.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\ka.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\km.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\ko.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\lb.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\lt.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\lv.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\me.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\mk.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\ml.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\mr.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\ms-my.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\ms.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\my.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\nb.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\ne.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\nl.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\nn.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\pl.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\pt-br.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\pt.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\ro.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\ru.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\si.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\sk.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\sl.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\sq.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\sr-cyrl.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\sr.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\sv.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\ta.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\th.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\tl-ph.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\tr.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\tzl.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\tzm-latn.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\tzm.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\uk.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\uz.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\vi.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\zh-cn.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\locale\zh-tw.js" />
+    <Content Include="Content\assets\layouts\material\plugins\moment\src\moment.js" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\area-as-line.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\area.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\bar-colors.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\bar-no-axes.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\bar.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\days.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\decimal-custom-hover.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\diagonal-xlabels-bar.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\diagonal-xlabels.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\donut-colors.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\donut-formatter.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\donut.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\dst.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\events.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\goals.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\lib\example.css" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\lib\example.js" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\months-no-smooth.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\negative.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\no-grid.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\non-continuous.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\non-date.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\quarters.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\resize.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\stacked_bars.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\timestamps.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\updating.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\weeks.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\years.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\examples\_template.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\Gruntfile.js" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\morris.css" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\morris.js" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\morris.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\spec\specs.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\spec\viz\examples.js" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\spec\viz\exemplary\area0.png" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\spec\viz\exemplary\bar0.png" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\spec\viz\exemplary\line0.png" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\spec\viz\exemplary\stacked_bar0.png" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\spec\viz\test.html" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\spec\viz\visual_specs.js" />
+    <Content Include="Content\assets\layouts\material\plugins\multiselect\css\multi-select.css" />
+    <Content Include="Content\assets\layouts\material\plugins\multiselect\img\switch.png" />
+    <Content Include="Content\assets\layouts\material\plugins\multiselect\js\jquery.multi-select.js" />
+    <Content Include="Content\assets\layouts\material\plugins\nestable\jquery.nestable.js" />
+    <Content Include="Content\assets\layouts\material\plugins\nestable\nestable.css" />
+    <Content Include="Content\assets\layouts\material\plugins\peity\jquery.peity.init.js" />
+    <Content Include="Content\assets\layouts\material\plugins\peity\jquery.peity.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\pretify\prettify.js" />
+    <Content Include="Content\assets\layouts\material\plugins\prism\prism-old.css" />
+    <Content Include="Content\assets\layouts\material\plugins\prism\prism.css" />
+    <Content Include="Content\assets\layouts\material\plugins\prism\prism.js" />
+    <Content Include="Content\assets\layouts\material\plugins\register-steps\jquery.easing.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\register-steps\register-init.js" />
+    <Content Include="Content\assets\layouts\material\plugins\register-steps\steps.css" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\css\select2.css" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\css\select2.min.css" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\ar.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\az.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\bg.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\ca.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\cs.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\da.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\de.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\el.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\en.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\es.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\et.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\eu.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\fa.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\fi.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\fr.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\gl.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\he.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\hi.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\hr.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\hu.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\id.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\is.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\it.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\ja.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\km.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\ko.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\lt.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\lv.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\mk.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\ms.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\nb.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\nl.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\pl.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\pt-BR.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\pt.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\ro.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\ru.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\sk.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\sr-Cyrl.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\sr.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\sv.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\th.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\tr.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\uk.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\vi.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\zh-CN.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\i18n\zh-TW.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\select2.full.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\select2.full.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\select2.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\dist\js\select2.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\announcements-4.0.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\browserconfig.xml" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\community.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\examples.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\images\android-chrome-36x36.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\images\android-chrome-48x48.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\images\android-chrome-72x72.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\images\apple-touch-icon-57x57.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\images\apple-touch-icon-60x60.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\images\apple-touch-icon-72x72.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\images\apple-touch-icon-precomposed.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\images\apple-touch-icon.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\images\favicon-16x16.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\images\favicon-32x32.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\images\favicon.ico" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\images\logo.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\images\mstile-150x150.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\images\mstile-310x150.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\images\mstile-70x70.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\images\safari-pinned-tab.svg" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\index.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\options-old.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\options.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\ak.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\al.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\ar.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\az.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\ca.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\co.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\ct.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\de.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\fl.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\ga.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\hi.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\ia.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\id.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\il.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\in.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\ks.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\ky.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\la.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\ma.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\md.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\me.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\mi.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\mn.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\mo.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\ms.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\mt.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\nc.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\nd.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\ne.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\nh.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\nj.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\nm.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\nv.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\ny.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\oh.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\ok.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\or.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\pa.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\ri.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\sc.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\sd.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\tn.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\tx.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\ut.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\va.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\vt.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\wa.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\wi.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\wv.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\images\flags\wy.png" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\js\anchor.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\js\bootstrap.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\js\jquery.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\js\placeholders.jquery.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\js\prettify.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\examples\basics.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\examples\data.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\examples\disabled-mode.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\examples\disabled-results.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\examples\hide-search.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\examples\localization-rtl-diacritics.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\examples\matcher.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\examples\multiple-max.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\examples\placeholders.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\examples\programmatic-control.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\examples\tags.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\examples\themes-templating-responsive-design.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\examples\tokenizer.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\footer.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\ga.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\head.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\js-source-states.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\navigation.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\nav\announcements-4.0.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\nav\examples.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\nav\options-old.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\nav\options.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\notice-previous.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options-old\adapters.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options-old\backwards-compatibility.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options-old\core-options.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options-old\dropdown.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options-old\events.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options-old\setting-default-options.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\compatibility.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\compatibility\initial-selection.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\compatibility\introduction.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\compatibility\matcher.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\compatibility\query-function.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\compatibility\text-input.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\core.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\core\amd-support.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\core\data-attributes.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\core\options.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\data.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\data\ajax.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\data\array.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\data\select.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\dropdown.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\dropdown\filtering.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\dropdown\placement.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\dropdown\selections.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\dropdown\tagging.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\events.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\events\internal.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\events\jquery.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\introduction.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\not-written.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\selections.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\selections\clearing-selections.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\selections\multiple.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\selections\placeholder.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\options\selections\templating.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_includes\social-buttons.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_layouts\default.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_layouts\home.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\Gruntfile.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\banner.end.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\banner.start.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\jquery.mousewheel.shim.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\jquery.select2.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\jquery.shim.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\compat\containerCss.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\compat\dropdownCss.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\compat\initSelection.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\compat\inputData.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\compat\matcher.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\compat\query.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\compat\utils.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\core.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\data\ajax.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\data\array.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\data\base.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\data\maximumInputLength.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\data\maximumSelectionLength.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\data\minimumInputLength.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\data\select.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\data\tags.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\data\tokenizer.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\defaults.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\diacritics.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\dropdown.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\dropdown\attachBody.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\dropdown\attachContainer.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\dropdown\closeOnSelect.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\dropdown\hidePlaceholder.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\dropdown\infiniteScroll.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\dropdown\minimumResultsForSearch.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\dropdown\search.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\dropdown\selectOnClose.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\dropdown\stopPropagation.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\ar.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\az.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\bg.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\ca.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\cs.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\da.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\de.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\el.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\en.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\es.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\et.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\eu.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\fa.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\fi.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\fr.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\gl.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\he.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\hi.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\hr.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\hu.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\id.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\is.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\it.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\ja.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\km.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\ko.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\lt.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\lv.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\mk.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\ms.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\nb.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\nl.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\pl.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\pt-BR.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\pt.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\ro.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\ru.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\sk.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\sr-Cyrl.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\sr.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\sv.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\th.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\tr.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\uk.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\vi.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\zh-CN.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\i18n\zh-TW.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\keys.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\options.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\results.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\selection\allowClear.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\selection\base.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\selection\clickMask.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\selection\eventRelay.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\selection\multiple.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\selection\placeholder.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\selection\search.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\selection\single.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\selection\stopPropagation.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\translation.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\select2\utils.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\wrapper.end.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\js\wrapper.start.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\a11y\search-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\a11y\selection-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\data\array-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\data\base-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\data\inputData-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\data\maximumInputLength-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\data\maximumSelectionLength-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\data\minimumInputLength-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\data\select-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\data\tags-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\data\tokenizer-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\dropdown\dropdownCss-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\dropdown\positioning-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\dropdown\selectOnClose-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\dropdown\stopPropagation-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\helpers.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\integration.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\integration\dom-changes.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\integration\jquery-calls.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\integration\select2-methods.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\options\ajax-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\options\data-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\options\deprecated-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\options\translation-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\options\width-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\results\focusing-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\selection\allowClear-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\selection\containerCss-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\selection\multiple-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\selection\placeholder-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\selection\search-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\selection\single-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\selection\stopPropagation-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\unit.html" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\utils\decorator-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\utils\escapeMarkup-tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\vendor\jquery-1.7.2.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\vendor\qunit-1.23.1.css" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\tests\vendor\qunit-1.23.1.js" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\vendor\jquery-2.1.0.js" />
+    <Content Include="Content\assets\layouts\material\plugins\sidebar-nav\dist\sidebar-nav.css" />
+    <Content Include="Content\assets\layouts\material\plugins\sidebar-nav\dist\sidebar-nav.js" />
+    <Content Include="Content\assets\layouts\material\plugins\sidebar-nav\dist\sidebar-nav.min.css" />
+    <Content Include="Content\assets\layouts\material\plugins\sidebar-nav\dist\sidebar-nav.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\sidebar-nav\Gruntfile.js" />
+    <Content Include="Content\assets\layouts\material\plugins\sidebar-nav\src\metisMenu.css" />
+    <Content Include="Content\assets\layouts\material\plugins\sidebar-nav\src\metisMenu.js" />
+    <Content Include="Content\assets\layouts\material\plugins\simple-file-upload\simpleUpload.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\skycons\skycons.js" />
+    <Content Include="Content\assets\layouts\material\plugins\sparkline\jquery.charts-sparkline.js" />
+    <Content Include="Content\assets\layouts\material\plugins\sparkline\jquery.sparkline.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\sticky-kit-master\dist\sticky-kit.js" />
+    <Content Include="Content\assets\layouts\material\plugins\sticky-kit-master\dist\sticky-kit.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\styleswitcher\jQuery.style.switcher.js" />
+    <Content Include="Content\assets\layouts\material\plugins\sweetalert\jquery.sweet-alert.custom.js" />
+    <Content Include="Content\assets\layouts\material\plugins\sweetalert\sweetalert-dev.js" />
+    <Content Include="Content\assets\layouts\material\plugins\sweetalert\sweetalert.css" />
+    <Content Include="Content\assets\layouts\material\plugins\sweetalert\sweetalert.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\switchery\dist\switchery.css" />
+    <Content Include="Content\assets\layouts\material\plugins\switchery\dist\switchery.js" />
+    <Content Include="Content\assets\layouts\material\plugins\switchery\dist\switchery.min.css" />
+    <Content Include="Content\assets\layouts\material\plugins\switchery\dist\switchery.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\switchery\meteor\export.js" />
+    <Content Include="Content\assets\layouts\material\plugins\switchery\meteor\tests.js" />
+    <Content Include="Content\assets\layouts\material\plugins\switchery\switchery.css" />
+    <Content Include="Content\assets\layouts\material\plugins\switchery\switchery.js" />
+    <Content Include="Content\assets\layouts\material\plugins\timepicker\bootstrap-timepicker.min.css" />
+    <Content Include="Content\assets\layouts\material\plugins\timepicker\bootstrap-timepicker.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\toast-master\css\jquery.toast.css" />
+    <Content Include="Content\assets\layouts\material\plugins\toast-master\css\jquery.toast.min.css">
+      <DependentUpon>jquery.toast.css</DependentUpon>
+    </Content>
+    <Content Include="Content\assets\layouts\material\plugins\toast-master\js\jquery.toast.js" />
+    <Content Include="Content\assets\layouts\material\plugins\toast-master\js\jquery.toast.min.js">
+      <DependentUpon>jquery.toast.js</DependentUpon>
+    </Content>
+    <Content Include="Content\assets\layouts\material\plugins\waypoints\lib\jquery.waypoints.js" />
+    <Content Include="Content\assets\layouts\material\plugins\waypoints\lib\jquery.waypoints.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\waypoints\lib\noframework.waypoints.js" />
+    <Content Include="Content\assets\layouts\material\plugins\waypoints\lib\noframework.waypoints.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\waypoints\lib\shortcuts\infinite.js" />
+    <Content Include="Content\assets\layouts\material\plugins\waypoints\lib\shortcuts\infinite.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\waypoints\lib\shortcuts\inview.js" />
+    <Content Include="Content\assets\layouts\material\plugins\waypoints\lib\shortcuts\inview.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\waypoints\lib\shortcuts\sticky.js" />
+    <Content Include="Content\assets\layouts\material\plugins\waypoints\lib\shortcuts\sticky.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\waypoints\lib\waypoints.debug.js" />
+    <Content Include="Content\assets\layouts\material\plugins\waypoints\lib\zepto.waypoints.js" />
+    <Content Include="Content\assets\layouts\material\plugins\waypoints\lib\zepto.waypoints.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\wizard\jquery.steps.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\wizard\jquery.validate.min.js" />
+    <Content Include="Content\assets\layouts\material\plugins\wizard\steps.css" />
+    <Content Include="Content\assets\layouts\material\plugins\wizard\steps.js" />
+    <Content Include="Content\assets\pages\css\login.css" />
+    <Content Include="Content\assets\pages\css\user_channel_index.css" />
+    <Content Include="Content\assets\pages\css\user_channel_contents.css" />
+    <Content Include="Content\assets\pages\css\user_contents_index.css" />
+    <Content Include="Content\assets\pages\css\user_adstimebox.css" />
+    <Content Include="Content\assets\pages\css\user_device_create.css" />
+    <Content Include="Content\assets\pages\css\user_device_index.css" />
+    <Content Include="Content\assets\pages\scripts\user_channel_content.js" />
+    <Content Include="Content\assets\pages\scripts\user_admin_users.js" />
+    <Content Include="Content\assets\pages\scripts\user_content_index.js" />
+    <Content Include="Content\assets\pages\scripts\user_device_edit.js" />
+    <Content Include="Content\assets\pages\scripts\user_channel_index.js" />
+    <Content Include="Content\assets\pages\scripts\user_content_create.js" />
+    <Content Include="Content\assets\pages\scripts\user_device_create.js" />
+    <Content Include="Content\assets\pages\scripts\user_adsdevices_index.js" />
+    <Content Include="Content\assets\pages\scripts\user_log_index.js" />
+    <Content Include="Content\assets\pages\scripts\user_device_index.js" />
+    <Content Include="Content\assets\pages\scripts\user_adstimebox_index.js" />
+    <Content Include="Content\assets\pages\scripts\user_timebox_index - Copy.min.js">
+      <DependentUpon>user_adstimebox_index.js</DependentUpon>
+    </Content>
+    <Content Include="Content\fullcalendar.css" />
+    <Content Include="Content\fullcalendar.min.css" />
+    <Content Include="Content\fullcalendar.print.css" />
+    <Content Include="Content\fullcalendar.print.min.css" />
+    <Content Include="Content\gijgo\combined\gijgo.css" />
+    <Content Include="Content\gijgo\combined\gijgo.min.css" />
+    <Content Include="Content\gijgo\modular\checkbox.css" />
+    <Content Include="Content\gijgo\modular\checkbox.min.css" />
+    <Content Include="Content\gijgo\modular\core.css" />
+    <Content Include="Content\gijgo\modular\core.min.css" />
+    <Content Include="Content\gijgo\modular\datepicker.css" />
+    <Content Include="Content\gijgo\modular\datepicker.min.css" />
+    <Content Include="Content\gijgo\modular\dialog.css" />
+    <Content Include="Content\gijgo\modular\dialog.min.css" />
+    <Content Include="Content\gijgo\modular\dropdown.css" />
+    <Content Include="Content\gijgo\modular\dropdown.min.css" />
+    <Content Include="Content\gijgo\modular\editor.css" />
+    <Content Include="Content\gijgo\modular\editor.min.css" />
+    <Content Include="Content\gijgo\modular\grid.css" />
+    <Content Include="Content\gijgo\modular\grid.min.css" />
+    <Content Include="Content\gijgo\modular\tree.css" />
+    <Content Include="Content\gijgo\modular\tree.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="ConnectionString.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\assets\global\fonts\IRANSansWeb.eot" />
+    <Content Include="Content\assets\global\fonts\IRANSansWeb.ttf" />
+    <Content Include="Content\assets\global\fonts\IRANSansWeb.woff" />
+    <Content Include="Content\assets\global\fonts\IRANSansWeb.woff2" />
+    <Content Include="Content\assets\global\fonts\IRANSansWeb_Bold.eot" />
+    <Content Include="Content\assets\global\fonts\IRANSansWeb_Bold.ttf" />
+    <Content Include="Content\assets\global\fonts\IRANSansWeb_Bold.woff" />
+    <Content Include="Content\assets\global\fonts\IRANSansWeb_Bold.woff2" />
+    <Content Include="Content\assets\global\fonts\IRANSansWeb_Light.eot" />
+    <Content Include="Content\assets\global\fonts\IRANSansWeb_Light.ttf" />
+    <Content Include="Content\assets\global\fonts\IRANSansWeb_Light.woff" />
+    <Content Include="Content\assets\global\fonts\IRANSansWeb_Light.woff2" />
+    <Content Include="Content\assets\global\fonts\IRANSansWeb_Medium.eot" />
+    <Content Include="Content\assets\global\fonts\IRANSansWeb_Medium.ttf" />
+    <Content Include="Content\assets\global\fonts\IRANSansWeb_Medium.woff" />
+    <Content Include="Content\assets\global\fonts\IRANSansWeb_Medium.woff2" />
+    <Content Include="Content\assets\global\fonts\IRANSansWeb_UltraLight.eot" />
+    <Content Include="Content\assets\global\fonts\IRANSansWeb_UltraLight.ttf" />
+    <Content Include="Content\assets\global\fonts\IRANSansWeb_UltraLight.woff" />
+    <Content Include="Content\assets\global\fonts\IRANSansWeb_UltraLight.woff2" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-rtl-master\.gitignore" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-rtl-master\.gitmodules" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-rtl-master\bower.json" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-rtl-master\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-rtl-master\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-rtl-master\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-rtl-master\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap-rtl-master\README.md" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Content\assets\layouts\material\plugins\flot.tooltip\.bower.json" />
+    <Content Include="Content\assets\layouts\material\plugins\flot.tooltip\bower.json" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\.bower.json" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\.gitignore" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\.travis.yml" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\bower.json" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\bower.travis.json" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\less\morris.core.less" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\lib\morris.area.coffee" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\lib\morris.bar.coffee" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\lib\morris.coffee" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\lib\morris.donut.coffee" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\lib\morris.grid.coffee" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\lib\morris.hover.coffee" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\lib\morris.line.coffee" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\package.json" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\README.md" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\spec\lib\area\area_spec.coffee" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\spec\lib\bar\bar_spec.coffee" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\spec\lib\bar\colours.coffee" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\spec\lib\commas_spec.coffee" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\spec\lib\donut\donut_spec.coffee" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\spec\lib\grid\auto_grid_lines_spec.coffee" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\spec\lib\grid\set_data_spec.coffee" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\spec\lib\grid\y_label_format_spec.coffee" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\spec\lib\hover_spec.coffee" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\spec\lib\label_series_spec.coffee" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\spec\lib\line\line_spec.coffee" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\spec\lib\pad_spec.coffee" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\spec\lib\parse_time_spec.coffee" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\spec\support\placeholder.coffee" />
+    <Content Include="Content\assets\layouts\material\plugins\morrisjs\spec\viz\run.sh" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\.editorconfig" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\.gitignore" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\.jshintignore" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\.jshintrc" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\.travis.yml" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\bower.json" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\component.json" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\composer.json" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\CONTRIBUTING.md" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\.gitignore" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\css\bootstrap.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\css\font-awesome.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\css\s2-docs.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\dist\.gitkeep" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\images\manifest.json" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\README.md" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\vendor\fonts\FontAwesome.otf" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_alerts.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_buttons.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_center-block.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_forms.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_gradients.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_grid.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_hide-text.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_image.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_labels.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_list-group.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_nav-vertical-align.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_opacity.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_pagination.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_panels.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_progress-bar.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_reset-filter.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_resize.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_responsive-visibility.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_size.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_tab-focus.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_table-row.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_text-overflow.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\mixins\_vendor-prefixes.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_alerts.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_badges.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_breadcrumbs.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_button-groups.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_buttons.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_carousel.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_close.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_code.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_component-animations.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_dropdowns.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_forms.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_glyphicons.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_grid.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_input-groups.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_jumbotron.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_labels.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_list-group.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_media.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_mixins.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_modals.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_navbar.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_navs.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_normalize.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_pager.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_pagination.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_panels.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_popovers.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_print.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_progress-bars.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_responsive-embed.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_responsive-utilities.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_scaffolding.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_tables.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_theme.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_thumbnails.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_tooltip.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_type.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_utilities.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_variables.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\bootstrap\_wells.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\font-awesome\_animated.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\font-awesome\_bordered-pulled.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\font-awesome\_core.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\font-awesome\_fixed-width.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\font-awesome\_icons.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\font-awesome\_larger.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\font-awesome\_list.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\font-awesome\_mixins.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\font-awesome\_path.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\font-awesome\_rotated-flipped.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\font-awesome\_stacked.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\vendor\font-awesome\_variables.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\_alert.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\_anchorjs.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\_buttons.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\_code.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\_dl-panels.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\_examples.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\_featurette.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\_footer.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\_hamburger.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\_home.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\_jumbotron.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\_layout.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\_nav.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\_prettify.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\_result-repository.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\_sidenav.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\_social.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\_syntax-highlighting.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\docs\_sass\_typography.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\ISSUE_TEMPLATE.md" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\LICENSE.md" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\package.json" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\PULL_REQUEST_TEMPLATE.md" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\README.md" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\select2.jquery.json" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\scss\core.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\scss\mixins\_gradients.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\scss\theme\classic\layout.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\scss\theme\classic\_defaults.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\scss\theme\classic\_multiple.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\scss\theme\classic\_single.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\scss\theme\default\layout.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\scss\theme\default\_multiple.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\scss\theme\default\_single.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\scss\_dropdown.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\scss\_multiple.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\select2\src\scss\_single.scss" />
+    <Content Include="Content\assets\layouts\material\plugins\sidebar-nav\.bower.json" />
+    <Content Include="Content\assets\layouts\material\plugins\sidebar-nav\bower.json" />
+    <Content Include="Content\assets\layouts\material\plugins\sidebar-nav\LICENSE" />
+    <Content Include="Content\assets\layouts\material\plugins\sidebar-nav\package.json" />
+    <Content Include="Content\assets\layouts\material\plugins\sidebar-nav\README.md" />
+    <Content Include="Content\assets\layouts\material\plugins\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\assets\layouts\material\plugins\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\assets\layouts\material\plugins\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\assets\layouts\material\plugins\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\assets\layouts\material\plugins\font-awesome\fonts\FontAwesome.otf" />
+    <None Include="bundleconfig.json" />
+    <Content Include="AppSettings.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\4.0.0-beta\css\bootstrap-grid.css.map" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\4.0.0-beta\css\bootstrap-grid.min.css.map" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\4.0.0-beta\css\bootstrap-reboot.css.map" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\4.0.0-beta\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\4.0.0-beta\css\bootstrap.css.map" />
+    <Content Include="Content\assets\layouts\material\plugins\bootstrap\4.0.0-beta\css\bootstrap.min.css.map" />
+    <Content Include="Content\assets\layouts\material-rtl\images\background\Thumbs.db" />
+    <Content Include="Content\assets\layouts\material\css\icons\material-icons\material-icons.woff2" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\Teleboard File System.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Player\index.html" />
+    <Content Include="public\css\fullcalendar.css" />
+    <Content Include="public\css\fullcalendar.print.css" />
+    <Content Include="Content\assets\pages\css\user_device_timebox.css" />
+    <Content Include="public\js\fullcalendar.min.js" />
+    <Content Include="public\js\jquery.js" />
+    <Content Include="public\js\moment.js" />
+    <Content Include="Content\assets\pages\scripts\user_timebox_index.js" />
+    <Content Include="public\js\scheduler.js" />
+    <Content Include="Scripts\component-customized-scripts.js" />
+    <Content Include="Scripts\fullcalendar\fullcalendar.js" />
+    <Content Include="Scripts\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Scripts\fullcalendar\gcal.js" />
+    <Content Include="Scripts\fullcalendar\gcal.min.js" />
+    <Content Include="Scripts\fullcalendar\locale-all.js" />
+    <Content Include="Scripts\fullcalendar\locale\af.js" />
+    <Content Include="Scripts\fullcalendar\locale\ar-dz.js" />
+    <Content Include="Scripts\fullcalendar\locale\ar-kw.js" />
+    <Content Include="Scripts\fullcalendar\locale\ar-ly.js" />
+    <Content Include="Scripts\fullcalendar\locale\ar-ma.js" />
+    <Content Include="Scripts\fullcalendar\locale\ar-sa.js" />
+    <Content Include="Scripts\fullcalendar\locale\ar-tn.js" />
+    <Content Include="Scripts\fullcalendar\locale\ar.js" />
+    <Content Include="Scripts\fullcalendar\locale\bg.js" />
+    <Content Include="Scripts\fullcalendar\locale\ca.js" />
+    <Content Include="Scripts\fullcalendar\locale\cs.js" />
+    <Content Include="Scripts\fullcalendar\locale\da.js" />
+    <Content Include="Scripts\fullcalendar\locale\de-at.js" />
+    <Content Include="Scripts\fullcalendar\locale\de-ch.js" />
+    <Content Include="Scripts\fullcalendar\locale\de.js" />
+    <Content Include="Scripts\fullcalendar\locale\el.js" />
+    <Content Include="Scripts\fullcalendar\locale\en-au.js" />
+    <Content Include="Scripts\fullcalendar\locale\en-ca.js" />
+    <Content Include="Scripts\fullcalendar\locale\en-gb.js" />
+    <Content Include="Scripts\fullcalendar\locale\en-ie.js" />
+    <Content Include="Scripts\fullcalendar\locale\en-nz.js" />
+    <Content Include="Scripts\fullcalendar\locale\es-do.js" />
+    <Content Include="Scripts\fullcalendar\locale\es.js" />
+    <Content Include="Scripts\fullcalendar\locale\et.js" />
+    <Content Include="Scripts\fullcalendar\locale\eu.js" />
+    <Content Include="Scripts\fullcalendar\locale\fa.js" />
+    <Content Include="Scripts\fullcalendar\locale\fi.js" />
+    <Content Include="Scripts\fullcalendar\locale\fr-ca.js" />
+    <Content Include="Scripts\fullcalendar\locale\fr-ch.js" />
+    <Content Include="Scripts\fullcalendar\locale\fr.js" />
+    <Content Include="Scripts\fullcalendar\locale\gl.js" />
+    <Content Include="Scripts\fullcalendar\locale\he.js" />
+    <Content Include="Scripts\fullcalendar\locale\hi.js" />
+    <Content Include="Scripts\fullcalendar\locale\hr.js" />
+    <Content Include="Scripts\fullcalendar\locale\hu.js" />
+    <Content Include="Scripts\fullcalendar\locale\id.js" />
+    <Content Include="Scripts\fullcalendar\locale\is.js" />
+    <Content Include="Scripts\fullcalendar\locale\it.js" />
+    <Content Include="Scripts\fullcalendar\locale\ja.js" />
+    <Content Include="Scripts\fullcalendar\locale\kk.js" />
+    <Content Include="Scripts\fullcalendar\locale\ko.js" />
+    <Content Include="Scripts\fullcalendar\locale\lb.js" />
+    <Content Include="Scripts\fullcalendar\locale\lt.js" />
+    <Content Include="Scripts\fullcalendar\locale\lv.js" />
+    <Content Include="Scripts\fullcalendar\locale\mk.js" />
+    <Content Include="Scripts\fullcalendar\locale\ms-my.js" />
+    <Content Include="Scripts\fullcalendar\locale\ms.js" />
+    <Content Include="Scripts\fullcalendar\locale\nb.js" />
+    <Content Include="Scripts\fullcalendar\locale\nl-be.js" />
+    <Content Include="Scripts\fullcalendar\locale\nl.js" />
+    <Content Include="Scripts\fullcalendar\locale\nn.js" />
+    <Content Include="Scripts\fullcalendar\locale\pl.js" />
+    <Content Include="Scripts\fullcalendar\locale\pt-br.js" />
+    <Content Include="Scripts\fullcalendar\locale\pt.js" />
+    <Content Include="Scripts\fullcalendar\locale\ro.js" />
+    <Content Include="Scripts\fullcalendar\locale\ru.js" />
+    <Content Include="Scripts\fullcalendar\locale\sk.js" />
+    <Content Include="Scripts\fullcalendar\locale\sl.js" />
+    <Content Include="Scripts\fullcalendar\locale\sr-cyrl.js" />
+    <Content Include="Scripts\fullcalendar\locale\sr.js" />
+    <Content Include="Scripts\fullcalendar\locale\sv.js" />
+    <Content Include="Scripts\fullcalendar\locale\th.js" />
+    <Content Include="Scripts\fullcalendar\locale\tr.js" />
+    <Content Include="Scripts\fullcalendar\locale\uk.js" />
+    <Content Include="Scripts\fullcalendar\locale\vi.js" />
+    <Content Include="Scripts\fullcalendar\locale\zh-cn.js" />
+    <Content Include="Scripts\fullcalendar\locale\zh-tw.js" />
+    <Content Include="Scripts\gijgo\combined\gijgo.js" />
+    <Content Include="Scripts\gijgo\combined\gijgo.min.js" />
+    <Content Include="Scripts\gijgo\combined\messages\messages.bg-bg.js" />
+    <Content Include="Scripts\gijgo\combined\messages\messages.bg-bg.min.js" />
+    <Content Include="Scripts\gijgo\combined\messages\messages.de-de.js" />
+    <Content Include="Scripts\gijgo\combined\messages\messages.de-de.min.js" />
+    <Content Include="Scripts\gijgo\combined\messages\messages.fa-ir.js" />
+    <None Include="Scripts\jquery-2.2.4.intellisense.js" />
+    <Content Include="Scripts\gijgo\combined\messages\messages.fr-fr.js" />
+    <Content Include="Scripts\gijgo\combined\messages\messages.fr-fr.min.js" />
+    <Content Include="Scripts\gijgo\combined\messages\messages.pt-br.js" />
+    <Content Include="Scripts\gijgo\combined\messages\messages.pt-br.min.js" />
+    <Content Include="Scripts\gijgo\modular\checkbox.js" />
+    <Content Include="Scripts\gijgo\modular\checkbox.min.js" />
+    <Content Include="Scripts\gijgo\modular\core.js" />
+    <Content Include="Scripts\gijgo\modular\core.min.js" />
+    <Content Include="Scripts\gijgo\modular\datepicker.js" />
+    <Content Include="Scripts\gijgo\modular\datepicker.min.js" />
+    <Content Include="Scripts\gijgo\modular\dialog.js" />
+    <Content Include="Scripts\gijgo\modular\dialog.min.js" />
+    <Content Include="Scripts\gijgo\modular\draggable.js" />
+    <Content Include="Scripts\gijgo\modular\draggable.min.js" />
+    <Content Include="Scripts\gijgo\modular\dropdown.js" />
+    <Content Include="Scripts\gijgo\modular\dropdown.min.js" />
+    <Content Include="Scripts\gijgo\modular\droppable.js" />
+    <Content Include="Scripts\gijgo\modular\droppable.min.js" />
+    <Content Include="Scripts\gijgo\modular\editor.js" />
+    <Content Include="Scripts\gijgo\modular\editor.min.js" />
+    <Content Include="Scripts\gijgo\modular\grid.js" />
+    <Content Include="Scripts\gijgo\modular\grid.min.js" />
+    <Content Include="Scripts\gijgo\modular\tree.js" />
+    <Content Include="Scripts\gijgo\modular\tree.min.js" />
+    <Content Include="Scripts\jquery-2.2.4.js" />
+    <Content Include="Scripts\jquery-2.2.4.min.js" />
+    <Content Include="Scripts\jquery-2.2.4.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.11.1.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\jquery-migrate-1.4.1.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\moment-with-locales.js" />
+    <Content Include="Scripts\moment-with-locales.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\persian-date.min.js" />
+    <Content Include="Scripts\string-extensions.js" />
+    <Content Include="Scripts\TenantsYesNoChange.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="TeleboardPlayer\index.html" />
+    <Content Include="TeleboardPlayer\teleboard\app.css" />
+    <Content Include="TeleboardPlayer\teleboard\css\style.css" />
+    <Content Include="TeleboardPlayer\teleboard\js\player.js" />
+    <Content Include="Views\Contents\Approve.cshtml" />
+    <Content Include="Views\Channels\Approve.cshtml" />
+    <Content Include="Views\Approval\ContentDetails.cshtml" />
+    <Content Include="Views\Approval\ChennalDetails.cshtml" />
+    <Content Include="Views\Approval\TimeBoxDetails.cshtml" />
+    <Content Include="Views\Channels\Contents.cshtml" />
+    <Content Include="Views\Log\Index.cshtml" />
+    <Content Include="Views\AdsDevices\Index.cshtml" />
+    <None Include="Views\Shared\Calendar\calendar.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Error.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Account\NewAccountCheckEmail.cshtml" />
+    <Content Include="Views\Admin\Users.cshtml" />
+    <Content Include="Views\Admin\AddUser.cshtml" />
+    <Content Include="Views\Admin\Roles.cshtml" />
+    <Content Include="Views\Admin\AddRole.cshtml" />
+    <Content Include="Views\Admin\EditRole.cshtml" />
+    <Content Include="Views\Admin\EditUser.cshtml" />
+    <Content Include="Views\Scheduler\Create.cshtml" />
+    <Content Include="Views\Scheduler\Delete.cshtml" />
+    <Content Include="Views\Scheduler\Details.cshtml" />
+    <Content Include="Views\Scheduler\Edit.cshtml" />
+    <Content Include="Views\Scheduler\Index.cshtml" />
+    <Content Include="Views\Tenants\Create.cshtml" />
+    <Content Include="Views\Tenants\Delete.cshtml" />
+    <Content Include="Views\Tenants\Details.cshtml" />
+    <Content Include="Views\Tenants\Edit.cshtml" />
+    <Content Include="Views\Tenants\Index.cshtml" />
+    <Content Include="Views\Channels\Create.cshtml" />
+    <Content Include="Views\Channels\Delete.cshtml" />
+    <Content Include="Views\Channels\Details.cshtml" />
+    <Content Include="Views\Channels\Edit.cshtml" />
+    <Content Include="Views\Channels\Index.cshtml" />
+    <Content Include="Views\ConnectionTypes\Create.cshtml" />
+    <Content Include="Views\ConnectionTypes\Delete.cshtml" />
+    <Content Include="Views\ConnectionTypes\Details.cshtml" />
+    <Content Include="Views\ConnectionTypes\Edit.cshtml" />
+    <Content Include="Views\ConnectionTypes\Index.cshtml" />
+    <Content Include="Views\ContentTypes\Create.cshtml" />
+    <Content Include="Views\ContentTypes\Delete.cshtml" />
+    <Content Include="Views\ContentTypes\Details.cshtml" />
+    <Content Include="Views\ContentTypes\Edit.cshtml" />
+    <Content Include="Views\ContentTypes\Index.cshtml" />
+    <Content Include="Views\Contents\Create.cshtml" />
+    <Content Include="Views\Contents\Delete.cshtml" />
+    <Content Include="Views\Contents\Details.cshtml" />
+    <Content Include="Views\Contents\Edit.cshtml" />
+    <Content Include="Views\Contents\Index.cshtml" />
+    <Content Include="Views\TimeBoxes\Index.cshtml" />
+    <Content Include="Views\Translation\Create.cshtml" />
+    <Content Include="Views\Translation\Delete.cshtml" />
+    <Content Include="Views\Translation\Details.cshtml" />
+    <Content Include="Views\Translation\Edit.cshtml" />
+    <Content Include="Views\Translation\Index.cshtml" />
+    <Content Include="Views\Approval\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_SideBar.cshtml" />
+    <Content Include="Views\Shared\_LoginLayout.cshtml" />
+    <Content Include="Views\Shared\_ContentThumbnail.cshtml" />
+    <Content Include="Views\Shared\_Layout_RTL.cshtml" />
+    <Content Include="Views\Shared\_SideBar_RTL.cshtml" />
+    <Content Include="Views\AdsTimeBoxes\Index.cshtml" />
+    <None Include="Web.TeleboardFTP.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\assets\global\img\" />
+    <Folder Include="Content\assets\layouts\material-rtl\css\icons\" />
+    <Folder Include="Content\assets\layouts\material-rtl\fonts\" />
+    <Folder Include="Content\assets\layouts\material-rtl\images\users\" />
+    <Folder Include="Content\assets\layouts\material\fonts\" />
+    <Folder Include="Content\assets\layouts\material\plugins\etc\" />
+    <Folder Include="Content\assets\pages\img\" />
+    <Folder Include="Content\assets\pages\media\" />
+    <Folder Include="Content\gijgo\modular\checkbox\" />
+    <Folder Include="Content\gijgo\modular\dialog\" />
+    <Folder Include="Content\gijgo\modular\editor\" />
+    <Folder Include="Content\gijgo\modular\grid\" />
+    <Folder Include="Content\gijgo\modular\tree\" />
+    <Folder Include="Infrastructure\HttpHandler\" />
+    <Folder Include="Infrastructure\Mvc\Filters\Authentication\" />
+    <Folder Include="Infrastructure\Mvc\Filters\Authorization\" />
+    <Folder Include="Scripts\gijgo\modular\checkbox\" />
+    <Folder Include="Scripts\gijgo\modular\dialog\messages\" />
+    <Folder Include="Scripts\gijgo\modular\draggable\" />
+    <Folder Include="Scripts\gijgo\modular\droppable\" />
+    <Folder Include="Scripts\gijgo\modular\editor\messages\" />
+    <Folder Include="Scripts\gijgo\modular\grid\messages\" />
+    <Folder Include="Scripts\gijgo\modular\tree\" />
+    <Folder Include="TeleboardPlayer\teleboard\ts\" />
+    <Folder Include="Views\Home\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{042c0deb-5d6b-42b1-85bf-7da1520253db}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{0b493cb8-9527-4689-ae54-0f427eb9aefe}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{7dbe1dfd-574f-468c-aadf-b63f7d4aa87b}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DomainModel\DomainModel.csproj">
+      <Project>{62d9a1fa-686b-40e2-a1ef-ecdea9caa7f1}</Project>
+      <Name>DomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Localization\Localization.csproj">
+      <Project>{67dd5093-8b43-4b3f-9b59-70dc67f87197}</Project>
+      <Name>Localization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mapper\Mapper.csproj">
+      <Project>{b19589e5-41fb-40d7-bbbd-98475c824cde}</Project>
+      <Name>Mapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PresentationModel\PresentationModel.csproj">
+      <Project>{d2916195-8143-4269-82c2-822a965141b6}</Project>
+      <Name>PresentationModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Validation\Validation.csproj">
+      <Project>{eaa7e271-8a5b-47ea-b29d-62ce61b4e6e3}</Project>
+      <Name>Validation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50433</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50433/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

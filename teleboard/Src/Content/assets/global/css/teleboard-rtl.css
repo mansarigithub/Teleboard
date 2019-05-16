@@ -1,0 +1,306 @@
+﻿@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: bold;
+    src: url('/content/assets/global/fonts/IRANSansWeb_Bold.eot');
+    src: url('/content/assets/global/fonts/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('/content/assets/global/fonts/IRANSansWeb_Bold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('/content/assets/global/fonts/IRANSansWeb_Bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/content/assets/global/fonts/IRANSansWeb_Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 500;
+    src: url('/content/assets/global/fonts/IRANSansWeb_Medium.eot');
+    src: url('/content/assets/global/fonts/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('/content/assets/global/fonts/IRANSansWeb_Medium.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('/content/assets/global/fonts/IRANSansWeb_Medium.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/content/assets/global/fonts/IRANSansWeb_Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 300;
+    src: url('/content/assets/global/fonts/IRANSansWeb_Light.eot');
+    src: url('/content/assets/global/fonts/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('/content/assets/global/fonts/IRANSansWeb_Light.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('/content/assets/global/fonts/IRANSansWeb_Light.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/content/assets/global/fonts/IRANSansWeb_Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 200;
+    src: url('/content/assets/global/fonts/IRANSansWeb_UltraLight.eot');
+    src: url('/content/assets/global/fonts/IRANSansWeb_UltraLight.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('/content/assets/global/fonts/IRANSansWeb_UltraLight.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('/content/assets/global/fonts/IRANSansWeb_UltraLight.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/content/assets/global/fonts/IRANSansWeb_UltraLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: normal;
+    src: url('/content/assets/global/fonts/IRANSansWeb.eot');
+    src: url('/content/assets/global/fonts/IRANSansWeb.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('/content/assets/global/fonts/IRANSansWeb.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('/content/assets/global/fonts/IRANSansWeb.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/content/assets/global/fonts/IRANSansWeb.ttf') format('truetype');
+}
+
+body, p, h2, h3, h4, h5, div, input, span {
+    font-family: IRANSans;
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    .navbar-expand-md .navbar-nav .dropdown-menu-right {
+        right: auto;
+        left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .vertical-text {
+        transform: rotate(270deg);
+        transform-origin: center;
+        padding: 10px 0px;
+        float: left;
+    }
+
+    .alert-dismissible .close {
+        padding: 15px;
+        top: -15px;
+        right: -15px;
+    }
+
+    .card-header {
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+
+    .fc-content .fc-title {
+        min-width: 100px;
+        min-height: 100px;
+        direction: rtl;
+        text-align: center;
+    }
+
+    .gj-grid-md td {
+        padding: 0px;
+    }
+
+    .gj-grid-md th {
+        padding: 0px;
+        padding-left: 2px;
+    }
+}
+/*.container-fluid {
+    padding: 0 10px 10px 10px;
+}*/
+
+.gj-grid a:focus, .gj-grid a:hover {
+    color: #fc4444 !important;
+}
+
+.gj-grid b {
+    font-weight: bold !important;
+}
+
+.gj-grid tr[data-role=details] td {
+    text-align: right;
+}
+
+
+.float-left {
+    float: left;
+}
+
+.btn {
+    margin: 3px;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/*TABLE.gj-grid-table DIV[data-role=display], TABLE.gj-grid-table DIV[data-role=display] DIV {
+    vertical-align: middle;
+    text-indent: 0;
+    display: block !important;
+    white-space: normal !important;
+    -ms-word-break: break-word;
+    word-break: break-word;
+}*/
+
+.gj-grid-md {
+    font-size: 12px !important;
+}
+
+.gijgo-action {
+    font-size: 23px;
+    margin-left: 2px;
+    margin-right: 2px;
+    cursor: pointer;
+}
+
+/*Toast Notification*/
+.jq-toast-loader {
+    display: none !important;
+}
+
+
+.content-thumb {
+    position: relative;
+}
+
+TABLE.gj-grid DIV[data-role=display] > DIV {
+    white-space: nowrap !important;
+}
+
+.content-thumb {
+    margin: 5px 0;
+}
+
+    .content-thumb .content-cover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    .content-thumb .fa {
+        position: absolute;
+        font-size: 40px;
+        color: #ffffff;
+        /*width:40px;
+        height:40px;*/
+        margin-left: -20px;
+        margin-top: -20px;
+        left: 50%;
+        top: 50%;
+    }
+
+    .content-thumb img {
+        background-position: center;
+    }
+
+.alert p {
+    padding-top: 15px;
+    text-align: justify;
+}
+
+.alert strong {
+    font-size: large;
+}
+
+.navbar-nav .fa {
+    font-size: larger;
+}
+
+.topbar ul.dropdown-user li .dw-user-box .u-img {
+    width: 60px;
+}
+
+.page-titles {
+    margin-bottom: 12px;
+}
+
+#grid th {
+    text-align: right;
+}
+
+#grid td {
+    text-align: right;
+}
+
+.grid-command {
+    margin-left: 20px;
+}
+
+
+.clockpicker-popover {
+    direction: ltr;
+}
+
+.app-direction {
+    direction: rtl;
+}
+
+.online-icon {
+    margin-left: 4px;
+}
+
+TABLE.gj-grid tfoot DIV[data-role=display] {
+    padding: 5px;
+    direction: ltr;
+    float: left;
+}
+
+.clockpicker input {
+    text-align: right;
+    direction: ltr;
+}
+
+.page-help {
+    font-size: 15px;
+    padding: 3px 12px
+}
+
+.alert-dismissible .close {
+    padding: 15px;
+    top: -8px;
+    right: -15px;
+}
+
+.breadcrumb {
+    min-width: 200px;
+}
+
+.sweet-alert h2 {
+    font-size: 20px;
+}
+
+select > option {
+    direction: ltr;
+}
+
+.ltr-element {
+    direction: ltr;
+}
+
+.gj-grid-md td {
+    padding: 0px;
+}
+
+.gj-grid-md th {
+    padding-right: 2px;
+}
+
+.jq-toast-single {
+    font-size: 14px;
+    font-family: IranSans;
+    line-height: 20px;
+    text-align: justify !important;
+    direction: rtl;
+}
+
+    .jq-toast-single h2 {
+        font-family: IranSans;
+        font-size: 20px;
+        margin: 0 15px 10px 0;
+    }

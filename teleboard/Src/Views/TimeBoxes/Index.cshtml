@@ -1,0 +1,199 @@
+﻿@using Teleboard.UI.Models.Device
+@using Teleboard.Common.Enum
+@model DeviceScheduleViewModel
+@{
+    var device = Model.Device;
+    ViewBag.Title = Resources.DeviceTimeBox;
+    var userLang = (User as Teleboard.DomainModel.Core.ApplicationUser).Language;
+}
+
+@*@Html.Hidden("deviceId", Model.Device.Id)*@
+@Html.HiddenFor(m => m.IsGroupScheduling)
+@Html.Hidden("deviceIds", string.Join(",", Model.Devices.Select(d => d.Id)))
+
+<div class="modal fade" id="eventModal" tabindex="-1" role="dialog" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">@Resources.ScheduleDevice</h5>
+            </div>
+
+            <div class="modal-body">
+                <div class="row form-group">
+                    <div class="col-sm-6 col-xs-6 col-md-6">
+                        <label>@Resources.From</label> <span class="from-date-time small"></span>
+                        <div class="input-group clockpicker">
+                            <input id="fromTime" type="text" class="form-control from-time">
+                            <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xs-6 col-md-6">
+                        <label>@Resources.To</label> <span class="to-date-time small"></span>
+                        <div class="input-group clockpicker">
+                            <input id="toTime" type="text" class="form-control to-time">
+                            <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+                        </div>
+
+                    </div>
+                </div>
+                <hr />
+                <a>
+                    <div class="alert alert-info text-center selected-channel"></div>
+                </a>
+                <div class="form-group app-direction" id="EditView">
+                    @if (userLang == Language.English)
+                    {
+                        foreach (var ch in Model.Channels)
+                        {
+                            <input id="channel-@ch.Id" name="selectedChannel" type="radio" value="@ch.Id" data-channel-name="@ch.Name" class="radio-col-teal channel-item" />
+                            <label for="channel-@ch.Id">@ch.Name</label><br />
+                        }
+                    }
+                    else
+                    {
+                        foreach (var ch in Model.Channels)
+                        {
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input id="channel-@ch.Id" name="selectedChannel" type="radio" value="@ch.Id" data-channel-name="@ch.Name" class="radio-col-teal channel-item" />
+                                        <label for="channel-@ch.Id"></label>
+                                    </td>
+                                    <td><label for="channel-@ch.Id">@ch.Name</label></td>
+                                </tr>
+                            </table>
+                        }
+                    }
+                </div>
+                <hr />
+
+                @if (userLang == Language.English)
+                {
+                    <input type="checkbox" id="allowAdsCheckbox" class="filled-in chk-col-purple content-checkbox">
+                    <label for="allowAdsCheckbox">@Resources.AllowAdvertisementsInThisTimeBox</label>
+                }
+                else
+                {
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="allowAdsCheckbox" class="filled-in chk-col-purple content-checkbox">
+                                <label for="allowAdsCheckbox"></label>
+                            </td>
+                            <td>
+                                <label for="allowAdsCheckbox">@Resources.AllowAdvertisementsInThisTimeBox</label>
+                            </td>
+                        </tr>
+                    </table>
+                }
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success btn-modal btn-modal-ok float-left">@Resources.Ok</button>
+                <button type="button" class="btn btn-default btn-modal btn-modal-cancel" data-dismiss="modal">@Resources.Cancel</button>
+                <button type="button" class="btn btn-danger btn-modal btn-modal-delete">@Resources.Delete</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="calendarContainer">
+    <div id="calendar"></div>
+</div>
+
+<div id="timeIndicator" style="z-index:3000; display:none; position:absolute ; top:0; left:0; height:2px; width:100%; background-color:orangered;"></div>
+
+@section pageHelp {
+    <div class="alert alert-success alert-dismissible fade hide page-help" role="alert" data-page-name="channels-index">
+        <table>
+            <tr>
+                <td>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </td>
+                <td>
+                    <p>@Resources.PageHelpMessage_TimeBox_Index</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+}
+
+@section BreadcrumbMenu {
+    <div class="row">
+        <div class="col-md-6 col-12 text-center">
+            <span class="btn ">@(Model.IsGroupScheduling ? Resources.LoadDeviceScheduling : Resources.Device):</span>
+            <div class="btn-group" role="group">
+                @foreach (var item in Model.Devices)
+                {
+                    <button type="button"
+                            class="btn @(Model.IsGroupScheduling ? "btn-secondary" : "btn-info selected") device-button"
+                            data-device-id="@item.Id"
+                            @(Model.IsGroupScheduling ? "" : "disabled")
+                            data-device-name="@item.Name">
+                        @item.Name
+                    </button>
+                }
+            </div>
+        </div>
+
+        <div class="col-md-6 col-12 text-center">
+            @if (Model.IsGroupScheduling)
+            {
+                <button type="button" onclick="page.onSaveSchedulingClick()" class="btn waves-effect waves-light btn-success">
+                    @(Model.IsGroupScheduling ? @Resources.SaveGroupScheduling : @Resources.Save)
+                </button>
+            }
+            <button type="button" onclick="page.onRemoveAllSchedulingsClick()" class="btn waves-effect waves-light btn-danger">
+                @Resources.RemoveAllSchedulings
+            </button>
+        </div>
+
+    </div>
+}
+
+@section BreadcrumbItems {
+    <li class="breadcrumb-item">
+        <a href="/Scheduler">@Resources.Scheduler</a>
+    </li>
+    <li class="breadcrumb-item"> @Model.Devices.First().TenantName</li>
+    <li class="breadcrumb-item">
+        @for (var i = 0; i < Model.Devices.Count(); i++)
+        {
+            var d = Model.Devices.ElementAt(i);
+            <a href="/Scheduler/Edit/@d.Id" class="font-bold">@d.Name</a>
+            if (i < Model.Devices.Count() - 1)
+            {
+                <span class="m-r-5">,</span>
+            }
+        }
+    </li>
+
+    <li class="breadcrumb-item active">@(Model.IsGroupScheduling ? Resources.GroupScheduling : Resources.TimeBox)</li>
+}
+
+@section ComponentScripts{
+}
+
+@section scripts{
+    <script src="~/Scripts/moment.min.js"></script>
+    <script src="~/Scripts/fullcalendar/fullcalendar.min.js"></script>
+
+    @*<script type="text/javascript" src="~/Content/assets/layouts/material/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>*@
+    <script src="~/Content/assets/layouts/material/plugins/clockpicker/dist/bootstrap-clockpicker.min.js"></script>
+    <script src="~/Scripts/persian-date.min.js"></script>
+    <script src="~/Scripts/string-extensions.js"></script>
+    <script src="~/Content/assets/pages/scripts/user_timebox_index.js"></script>
+}
+@section localeScripts{
+    <script src="~/Scripts/fullcalendar/locale/fa.js"></script>
+}
+@section styles{
+    <link href="~/Content/fullcalendar.min.css" rel="stylesheet" />
+    <link href="~/Content/fullcalendar.print.min.css" rel="stylesheet" media="print" />
+    @*<link rel="stylesheet" href="~/Content/assets/layouts/material/plugins/bootstrap-timepicker/css/bootstrap-timepicker.css" type="text/css" />*@
+    <link href="~/Content/assets/layouts/material/plugins/clockpicker/dist/bootstrap-clockpicker.min.css" rel="stylesheet" />
+    <link href="~/Content/assets/pages/css/user_device_timebox.css" rel="stylesheet" />
+}

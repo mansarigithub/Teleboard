@@ -1,0 +1,62 @@
+﻿<div class="container">
+    <div class="modal fade" id="addEventModal" tabindex="-1" role="dialog" data-keyboard="false">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">
+                            <h3>Task</h3>
+                        </label>
+                        <button type="button" class="btn custom-button taskSelectLabel" id="exampleInputEmail1"></button>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-sm-6 col-xs-6 col-md-6">
+                            <label>From</label>
+                            <div class="input-group bootstrap-timepicker timepicker">
+                                <input id="fromTime" type="text" class="form-control input-small from-time">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 col-md-6">
+                            <label>To</label>
+                            <div class="input-group bootstrap-timepicker timepicker">
+                                <input id="toTime" type="text" class="form-control input-small to-time">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-sm-2 col-xs-2 col-md-2">
+                            <button type="button" class="btn btn-success editEventBtn pull-left">Save</button>
+                        </div>
+                        <div class="col-sm-2 col-xs-2 col-md-2">
+                            <button type="button" class="btn btn-default pull-left cancelBtn" data-dismiss="modal">Cancel</button>
+                        </div>
+                        <div class="col-sm-4 col-xs-4 col-md-4 pull-right">
+                            <button type="button" class="btn btn-danger deleteEventBtn">Delete</button>
+                        </div>
+                    </div>
+                    <hr />
+                    <p>Select task for list below</p>
+                    <br>
+                    <div class="form-group" id="EditView">
+                        <!-- Area for adding a task list -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul class="list-unstyled">
+        <li>
+            <label class="radio-inline" style="line-height:30px">
+                <input type="radio" name="optradio" class="dayView">&nbsp;Day View&nbsp;&nbsp;
+            </label>
+            <label class="radio-inline" style="line-height:30px">
+                <input type="radio" name="optradio" class="weekView" checked>&nbsp;Week View
+            </label>
+        </li>
+    </ul>
+    <div id="calendar"></div>
+</div>
+
+

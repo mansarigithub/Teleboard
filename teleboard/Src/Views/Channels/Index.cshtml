@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Teleboard.Models.ChannelIndexViewModel>
+@{
+    ViewBag.Title = Resources.Channels;
+}
+
+<table id="grid" style="display:none"></table>
+
+<template id="actionButtonsTemplate">
+    <a class="btn btn-success" href="/Channels/Edit/{id}">@Resources.Edit</a>
+    <a class="btn btn-warning" href="/Channels/Contents/{id}">@Resources.Contents</a>
+    @*<a class="btn btn-info" href="/Channels/Details/{id}">Details</a>
+        <a class="btn btn-danger" href="/Channels/Delete/{id}">Delete</a>*@
+</template>
+
+@section pageHelp {
+    <div class="alert alert-success alert-dismissible fade hide page-help" role="alert" data-page-name="channels-index">
+        <table>
+            <tr>
+                <td>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </td>
+                <td>
+                    <p>@string.Format(Resources.PageHelpMessage_Channel_Index, "<br/>")</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+}
+
+@section BreadcrumbMenu {
+    <a href="/Channels/Create" class="btn btn-info waves-effect waves-light">
+        <span class="btn-label"><i class="fa fa-plus"></i></span>@Resources.AddNewChannel
+    </a>
+}
+
+@section BreadcrumbItems {
+    <li class="breadcrumb-item">
+        <a href="#">@Resources.Channels</a>
+    </li>
+}
+
+@section scripts {
+    <script src="~/Scripts/gijgo/modular/core.min.js"></script>
+    <script src="~/Scripts/gijgo/modular/grid.min.js"></script>
+    <script src="~/Scripts/gijgo/combined/messages/messages.fa-ir.js"></script>
+    <script src="~/content/assets/pages/scripts/user_channel_index.js"></script>
+    <script src="~/Scripts/component-customized-scripts.js"></script>
+}
+
+@section styles {
+    <link href="~/Content/gijgo/modular/core.css" rel="stylesheet" />
+    <link href="~/Content/gijgo/modular/grid.min.css" rel="stylesheet" />
+    <link href="~/Content/assets/pages/css/user_channel_index.css" rel="stylesheet" />
+}
+

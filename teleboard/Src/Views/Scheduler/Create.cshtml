@@ -1,0 +1,139 @@
+﻿@using Teleboard.Common.Enum
+@model Teleboard.UI.Models.Device.CreateDeviceViewModel
+@{
+    ViewBag.Title = Resources.AddDevice;
+    var firstTenant = Model.Tenants.FirstOrDefault();
+    var tenantsSelectListItems = Model.Tenants.Select(t => new SelectListItem() { Text = t.Name, Value = t.Id.ToString() });
+    if (tenantsSelectListItems.Any())
+    {
+        tenantsSelectListItems.First().Selected = true;
+    }
+    var adsEnabled = firstTenant == null ? false : firstTenant.AdvertisementStatus == TenantAdvertisementStatus.Enabled;
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="card">
+        <div class="card-block card-body">
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group row">
+                    @Html.Label(Resources.TanantName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <select class="form-control" name="Device.TenantId" id="Device_TenantId" onchange="teleboard.page.onTenantChange(event)">
+                            @foreach (var t in Model.Tenants)
+                            {
+                                <option @(t == Model.Tenants.First() ? "selected" : "") value="@t.Id" data-ads-enabled="@(t.AdvertisementStatus == TenantAdvertisementStatus.Enabled)">@t.Name</option>
+                            }
+                        </select>
+                        @Html.ValidationMessageFor(model => model.Device.TenantId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.Label(Resources.TimeZone, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <select class="form-control" name="Device.TimeZoneId" id="Device_TimeZoneId">
+                            @foreach (var tz in Model.TimeZones)
+                            {
+                                var sign = tz.BaseUtcOffset < TimeSpan.Zero ? "-" : "+";
+                                var timeZoneOffset = sign + tz.BaseUtcOffset.ToString("hhmm");
+                                <option value="@tz.Id" title="@tz.DisplayName" data-tz-offset="@timeZoneOffset">@tz.DisplayName</option>
+                            }
+                        </select>
+
+                        @Html.ValidationMessageFor(model => model.Device.TimeZoneId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.Device.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Device.Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Device.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.Device.DeviceId, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Device.DeviceId, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Device.DeviceId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.Device.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Device.Description, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Device.Description, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group row ads-form-group @(adsEnabled ? "" : "disabled")">
+                    @Html.LabelFor(model => model.Device.PlayAdvertisement, htmlAttributes: new { @class = "col-md-2 form-control-label " + (adsEnabled ? "" : "disabled") })
+                    <div class="col-md-10">
+                        <input id="playAds-yes"
+                               name="Device.PlayAdvertisement"
+                               type="radio" value="True"
+                               @(Model.Device.PlayAdvertisement ? "checked" : "")
+                               class="radio-col-teal channel-item"
+                               @(adsEnabled ? "" : "disabled") />
+                        <label for="playAds-yes" class="m-r-20">@Resources.Yes</label>
+
+                        <input id="playAds-no"
+                               name="Device.PlayAdvertisement"
+                               type="radio"
+                               value="False"
+                               @(Model.Device.PlayAdvertisement ? "" : "checked")
+                               class="radio-col-teal channel-item"
+                               @(adsEnabled ? "" : "disabled") />
+                        <label for="playAds-no">@Resources.No</label>
+
+                        <label class="m-l-10 ads-status-msg disabled">@Resources.PlayingAdsForThisTenantIsDisabled</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <input type="submit" value="@Resources.Create" class="btn btn-default" />
+        </div>
+    </div>
+}
+
+@section pageHelp {
+    <div class="alert alert-success alert-dismissible fade hide page-help" role="alert" data-page-name="schedule-create">
+        <table>
+            <tr>
+                <td>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </td>
+                <td>
+                    <p>@Html.Raw(Resources.PageHelpMessage_Scheduler_Create)</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+}
+
+@section BreadcrumbItems {
+    <li class="breadcrumb-item">
+        <a href="/Scheduler/">@Resources.Scheduler</a>
+    </li>
+    <li class="breadcrumb-item active">@Resources.AddDevice</li>
+}
+
+@section Scripts {
+    <script src="~/Content/assets/layouts/material/plugins/moment/min/moment.min.js"></script>
+    <script src="~/Content/assets/layouts/material/plugins/moment/min/moment-timezone-with-data.min.js"></script>
+    <script src="~/Content/assets/pages/scripts/user_device_create.js"></script>
+}
+
+@section Styles {
+    <link href="~/Content/assets/pages/css/user_device_create.css" rel="stylesheet" />
+}
+
+

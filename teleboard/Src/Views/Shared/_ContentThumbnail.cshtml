@@ -1,0 +1,37 @@
+﻿@model Teleboard.PresentationModel.Model.Content.ContentPM
+@using Teleboard.Common.Enum;
+@{
+    string guid, id, contentTypeName, srcUrl, thumbUrl;
+    id = Model.Id.ToString();
+    guid = Model.Guid.ToString();
+    contentTypeName = Model.ContentTypeName;
+    srcUrl = Model.Url;
+    thumbUrl = Model.ThumbnailUrl;
+}
+
+<div class="content-thumb">
+    @if (Model.ResourceType == ResourceType.Video)
+    {
+        <div class="content-cover " data-resource-type="@((int)ResourceType.Video)">
+            <span class="fa fa-play-circle"></span>
+        </div>
+        <img class="img-thumbnail "
+             src="@thumbUrl"
+             data-content-type="@contentTypeName"
+             data-resource-type="@((int)ResourceType.Video)"
+             data-content-src="@srcUrl"
+             data-content-thumb="@thumbUrl"
+             data-content-id="@id" />
+    }
+
+    @if (Model.ResourceType == ResourceType.Image)
+    {
+        <img class="img-thumbnail"
+             src="@(thumbUrl)"
+             data-content-type="@contentTypeName"
+             data-resource-type="@((int)ResourceType.Image)"
+             data-content-src="@srcUrl"
+             data-content-thumb="@thumbUrl"
+             data-content-id="@id" />
+    }
+</div>

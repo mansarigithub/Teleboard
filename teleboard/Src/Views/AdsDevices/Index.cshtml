@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = Resources.Scheduler;
+}
+
+<div class="card">
+    <div class="card-block">
+        <table id="grid"></table>
+    </div>
+</div>
+
+@section pageHelp {
+    <div class="alert alert-success alert-dismissible fade hide page-help" role="alert" data-page-name="device-index">
+    <table>
+        <tr>
+            <td>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </td>
+            <td>
+                <p>@Resources.PageHelpMessage_AdsDevices_Index</p>
+            </td>
+            </tr>
+        </table>
+</div>
+}
+
+
+@section BreadcrumbItems {
+    <li class="breadcrumb-item">
+        <a href="#">@Resources.Devices</a>
+    </li>
+}
+
+@section scripts {
+    <script src="~/Scripts/gijgo/modular/core.min.js"></script>
+    <script src="~/Scripts/gijgo/modular/grid.min.js"></script>
+    <script src="~/Scripts/gijgo/combined/messages/messages.fa-ir.js"></script>
+    <script src="~/content/assets/pages/scripts/user_adsdevices_index.js"></script>
+    <script src="~/Scripts/component-customized-scripts.js"></script>
+}
+
+@section styles {
+    <link href="~/Content/gijgo/modular/core.css" rel="stylesheet" />
+    <link href="~/Content/gijgo/modular/grid.min.css" rel="stylesheet" />
+}

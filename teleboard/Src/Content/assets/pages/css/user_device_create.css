@@ -1,0 +1,7 @@
+.ads-form-group .ads-status-msg {
+    display: none;
+}
+
+.ads-form-group.disabled .ads-status-msg {
+    display: inline !important;
+}

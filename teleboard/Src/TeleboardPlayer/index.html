@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Preload videos and images via AJAX and then plays them </title>
+    <link href="teleboard/css/style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="AA_local/localschedule.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+    <script src="teleboard/js/player.js"></script>
+
+    <script src="app.js"></script>
+
+
+
+</head>
+<body>
+
+    <input type="text" value="fc8b3ccb-002d-494a-a773-c84a248a09f4" id="SubscriptionKey" class="textBox">
+    <input type="text" value="557753a3-9678-490b-9e42-43ecfc0e5651" id="DeviceId" class="textBox" style="top:10%">
+    <label for="SubscriptionKey" class="labelStyle" >SubscriptionKey:</label>
+    <label for="DeviceId" class="labelStyle" style="top:10%">DeviceID:</label>
+    <div class="fixed-width-height">
+        <video id="videoFrame"></video>
+        <img id="imageFrame">
+    </div>
+    <div id="messagePane" class="messagePane">
+        Caching ...
+    </div>
+</body>
+</html>

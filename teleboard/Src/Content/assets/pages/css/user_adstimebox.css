@@ -1,0 +1,138 @@
+.fc-content .fc-time {
+    display: none !important;
+}
+
+.fc-scroller.fc-time-grid-container {
+    height: auto !important;
+}
+
+.fc-content .fc-title {
+    font-size: 14px;
+    margin-top: 25px;
+    color: #333442;
+    text-align: center;
+}
+
+/*.fc-widget-content {
+    cursor: pointer;
+}*/
+
+.fc-axis {
+    cursor: default !important;
+}
+
+
+.fc-day-grid .fc-content-skeleton {
+    pointer-events: none;
+}
+
+.day-checked a {
+    color: black !important;
+}
+
+/*.modal-dialog {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}*/
+
+@media screen and (max-width:550px) {
+    .fc-agendaWeek-view .fc-time-grid-event .fc-content {
+        overflow: unset !important;
+    }
+
+    .fc-agendaWeek-view .fc-content .fc-title {
+        color: #000;
+        font-size: 11px;
+        margin-top: 49px;
+        transform: rotate(268deg);
+    }
+
+    .fc-agendaDay-view .fc-content .fc-title {
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .container-fluid {
+        padding: 0 5px 25px 5px;
+    }
+}
+
+/*.modal-content {
+    height: auto;
+    min-height: 100%;
+    border-radius: 0;
+}*/
+/*.fc-day-grid.fc-unselectable{
+	display: none;
+}*/
+.fc-agendaDay-button.fc-button.fc-state-default.fc-corner-left.fc-corner-right {
+    display: none;
+}
+
+.fc-agendaWeek-button.fc-button.fc-state-default.fc-corner-left.fc-corner-right {
+    display: none;
+}
+
+.fc-toolbar .fc-right {
+    float: left !important;
+}
+
+.fc-time-grid .fc-bgevent, .fc-time-grid .fc-event {
+    opacity: .85;
+}
+
+.disabled-timebox {
+    background: repeating-linear-gradient( 45deg, #797979, #797979 10px, #454751 10px, #454751 20px );
+    cursor: not-allowed;
+}
+
+.enabled-timebox {
+    cursor: pointer;
+}
+
+.contents {
+}
+
+.content-container {
+    background-color: aliceblue;
+    padding: 5px 5px 0 5px;
+    margin: 5px 5px 0 5px;
+    border-radius: 3px;
+    min-height: 220px;
+}
+
+    .content-container .content-header {
+        text-align: left;
+    }
+
+        .content-container .content-header label {
+            display: inherit;
+            word-wrap: break-word;
+            margin-bottom: 5px;
+        }
+
+    .content-container .content-footer {
+        text-align: left;
+    }
+
+.content-delay-sec {
+    max-width:100px;
+    border: 1px solid #b1d8ef;
+    border-radius:3px;
+    padding:4px;
+}
+
+    .content-delay-sec:disabled {
+        background-color: #e5edf5 !important;
+        color:#a5d4e9;
+    }
+
+
+.content-box .selection {
+    background-color: aliceblue;
+    margin:0 5px 0 5px;
+}
+
+

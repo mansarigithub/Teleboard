@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Teleboard.DomainModel.Core.ContentType>
+@{
+    ViewBag.Title = Resources.ContentTypes;
+}
+<p>
+    @Html.ActionLink(Resources.AddNewContentType, "Create", new { }, new { @class = "btn btn-info" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.ActionLink(Resources.Edit, "Edit", new { id = item.Id }, new { @class = "btn btn-success" })
+                @Html.ActionLink(Resources.Details, "Details", new { id = item.Id }, new { @class = "btn btn-info" })
+                @Html.ActionLink(Resources.Delete, "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+</table>
+
+@section BreadcrumbItems {
+    <li class="breadcrumb-item">@Resources.Administration</li>
+    <li class="breadcrumb-item">
+        <a href="#">@Resources.ContentTypes</a>
+    </li>
+    <li class="breadcrumb-item active">@Resources.List</li>
+}

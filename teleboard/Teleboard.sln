@@ -1,0 +1,162 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "Src\UI.csproj", "{2D4E369B-ADD4-4BEC-AD03-7F8A316003E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{61249171-DB72-4FA4-B1B3-036EA15E732F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{042C0DEB-5D6B-42B1-85BF-7DA1520253DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{0B493CB8-9527-4689-AE54-0F427EB9AEFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "- Infrastructure", "- Infrastructure", "{BF46C363-8CEA-4FF4-BBAF-2244FF9CDB44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mapper", "Mapper\Mapper.csproj", "{B19589E5-41FB-40D7-BBBD-98475C824CDE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{A45C73B5-DA7A-4748-B716-4F1B039B48A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{4749276F-2E18-4057-9ED4-874496D49E86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainModel", "DomainModel\DomainModel.csproj", "{62D9A1FA-686B-40E2-A1EF-ECDEA9CAA7F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentationModel", "PresentationModel\PresentationModel.csproj", "{D2916195-8143-4269-82C2-822A965141B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{525558AE-0A6B-497A-A414-42995FFB7A5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{42B9EF92-92A7-45BF-93A6-BC1560056025}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "- Cross Cutting Concerns", "- Cross Cutting Concerns", "{DB410943-E6CA-4D86-BCC5-C0AAD8B62673}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security", "Security\Security.csproj", "{1D37DD07-9F6F-4D36-806B-4CB06C7ED0EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation", "Validation\Validation.csproj", "{EAA7E271-8A5B-47EA-B29D-62CE61B4E6E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Access", "Data Access", "{4B7AF06B-7D2E-4A9C-88B3-2DAE32C0A7BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{7DBE1DFD-574F-468C-AADF-B63F7D4AA87B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localization", "Localization\Localization.csproj", "{67DD5093-8B43-4B3F-9B59-70DC67F87197}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D4E369B-ADD4-4BEC-AD03-7F8A316003E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D4E369B-ADD4-4BEC-AD03-7F8A316003E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D4E369B-ADD4-4BEC-AD03-7F8A316003E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D4E369B-ADD4-4BEC-AD03-7F8A316003E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61249171-DB72-4FA4-B1B3-036EA15E732F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61249171-DB72-4FA4-B1B3-036EA15E732F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61249171-DB72-4FA4-B1B3-036EA15E732F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61249171-DB72-4FA4-B1B3-036EA15E732F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{042C0DEB-5D6B-42B1-85BF-7DA1520253DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{042C0DEB-5D6B-42B1-85BF-7DA1520253DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{042C0DEB-5D6B-42B1-85BF-7DA1520253DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{042C0DEB-5D6B-42B1-85BF-7DA1520253DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B493CB8-9527-4689-AE54-0F427EB9AEFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B493CB8-9527-4689-AE54-0F427EB9AEFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B493CB8-9527-4689-AE54-0F427EB9AEFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B493CB8-9527-4689-AE54-0F427EB9AEFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B19589E5-41FB-40D7-BBBD-98475C824CDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B19589E5-41FB-40D7-BBBD-98475C824CDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B19589E5-41FB-40D7-BBBD-98475C824CDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B19589E5-41FB-40D7-BBBD-98475C824CDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62D9A1FA-686B-40E2-A1EF-ECDEA9CAA7F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62D9A1FA-686B-40E2-A1EF-ECDEA9CAA7F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62D9A1FA-686B-40E2-A1EF-ECDEA9CAA7F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62D9A1FA-686B-40E2-A1EF-ECDEA9CAA7F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2916195-8143-4269-82C2-822A965141B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2916195-8143-4269-82C2-822A965141B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2916195-8143-4269-82C2-822A965141B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2916195-8143-4269-82C2-822A965141B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D37DD07-9F6F-4D36-806B-4CB06C7ED0EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D37DD07-9F6F-4D36-806B-4CB06C7ED0EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D37DD07-9F6F-4D36-806B-4CB06C7ED0EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D37DD07-9F6F-4D36-806B-4CB06C7ED0EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAA7E271-8A5B-47EA-B29D-62CE61B4E6E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAA7E271-8A5B-47EA-B29D-62CE61B4E6E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAA7E271-8A5B-47EA-B29D-62CE61B4E6E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAA7E271-8A5B-47EA-B29D-62CE61B4E6E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DBE1DFD-574F-468C-AADF-B63F7D4AA87B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DBE1DFD-574F-468C-AADF-B63F7D4AA87B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DBE1DFD-574F-468C-AADF-B63F7D4AA87B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DBE1DFD-574F-468C-AADF-B63F7D4AA87B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67DD5093-8B43-4B3F-9B59-70DC67F87197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67DD5093-8B43-4B3F-9B59-70DC67F87197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67DD5093-8B43-4B3F-9B59-70DC67F87197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67DD5093-8B43-4B3F-9B59-70DC67F87197}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2D4E369B-ADD4-4BEC-AD03-7F8A316003E7} = {525558AE-0A6B-497A-A414-42995FFB7A5D}
+		{61249171-DB72-4FA4-B1B3-036EA15E732F} = {42B9EF92-92A7-45BF-93A6-BC1560056025}
+		{042C0DEB-5D6B-42B1-85BF-7DA1520253DB} = {A45C73B5-DA7A-4748-B716-4F1B039B48A3}
+		{0B493CB8-9527-4689-AE54-0F427EB9AEFE} = {BF46C363-8CEA-4FF4-BBAF-2244FF9CDB44}
+		{B19589E5-41FB-40D7-BBBD-98475C824CDE} = {BF46C363-8CEA-4FF4-BBAF-2244FF9CDB44}
+		{62D9A1FA-686B-40E2-A1EF-ECDEA9CAA7F1} = {4749276F-2E18-4057-9ED4-874496D49E86}
+		{D2916195-8143-4269-82C2-822A965141B6} = {4749276F-2E18-4057-9ED4-874496D49E86}
+		{1D37DD07-9F6F-4D36-806B-4CB06C7ED0EA} = {DB410943-E6CA-4D86-BCC5-C0AAD8B62673}
+		{EAA7E271-8A5B-47EA-B29D-62CE61B4E6E3} = {DB410943-E6CA-4D86-BCC5-C0AAD8B62673}
+		{7DBE1DFD-574F-468C-AADF-B63F7D4AA87B} = {4B7AF06B-7D2E-4A9C-88B3-2DAE32C0A7BF}
+		{67DD5093-8B43-4B3F-9B59-70DC67F87197} = {BF46C363-8CEA-4FF4-BBAF-2244FF9CDB44}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BBB17184-116F-4950-8034-AF9937DDE72B}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 12
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://visibify.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Test\\Test.csproj
+		SccProjectTopLevelParentUniqueName1 = Teleboard.sln
+		SccProjectName1 = Test
+		SccLocalPath1 = Test
+		SccProjectUniqueName2 = Business\\Business.csproj
+		SccProjectTopLevelParentUniqueName2 = Teleboard.sln
+		SccProjectName2 = Business
+		SccLocalPath2 = Business
+		SccProjectUniqueName3 = Common\\Common.csproj
+		SccProjectTopLevelParentUniqueName3 = Teleboard.sln
+		SccProjectName3 = Common
+		SccLocalPath3 = Common
+		SccProjectUniqueName4 = Mapper\\Mapper.csproj
+		SccProjectTopLevelParentUniqueName4 = Teleboard.sln
+		SccProjectName4 = Mapper
+		SccLocalPath4 = Mapper
+		SccProjectUniqueName5 = DomainModel\\DomainModel.csproj
+		SccProjectTopLevelParentUniqueName5 = Teleboard.sln
+		SccProjectName5 = DomainModel
+		SccLocalPath5 = DomainModel
+		SccProjectUniqueName6 = PresentationModel\\PresentationModel.csproj
+		SccProjectTopLevelParentUniqueName6 = Teleboard.sln
+		SccProjectName6 = PresentationModel
+		SccLocalPath6 = PresentationModel
+		SccProjectUniqueName7 = Security\\Security.csproj
+		SccProjectTopLevelParentUniqueName7 = Teleboard.sln
+		SccProjectName7 = Security
+		SccLocalPath7 = Security
+		SccProjectUniqueName8 = Validation\\Validation.csproj
+		SccProjectTopLevelParentUniqueName8 = Teleboard.sln
+		SccProjectName8 = Validation
+		SccLocalPath8 = Validation
+		SccProjectUniqueName9 = DataAccess\\DataAccess.csproj
+		SccProjectTopLevelParentUniqueName9 = Teleboard.sln
+		SccProjectName9 = DataAccess
+		SccLocalPath9 = DataAccess
+		SccProjectUniqueName10 = Localization\\Localization.csproj
+		SccProjectTopLevelParentUniqueName10 = Teleboard.sln
+		SccProjectName10 = Localization
+		SccLocalPath10 = Localization
+		SccProjectUniqueName11 = Src\\UI.csproj
+		SccProjectTopLevelParentUniqueName11 = Teleboard.sln
+		SccProjectName11 = Src
+		SccLocalPath11 = Src
+	EndGlobalSection
+EndGlobal

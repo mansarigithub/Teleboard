@@ -1,0 +1,61 @@
+﻿@model List<Teleboard.Models.GetUsersViewModel>
+
+@{
+    ViewBag.Title = Resources.Users;
+}
+
+<h3 class="panel-info">@ViewBag.Message</h3>
+
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th>@Resources.Email</th>
+            <th class="hidden-xs">@Resources.FirstName</th>
+            <th class="hidden-xs">@Resources.LastName</th>
+            <th class="hidden-xs">@Resources.Language</th>
+            <th class="hidden-xs">@Resources.Roles</th>
+            <th class="hidden-xs">@Resources.Tenants</th>
+            <th>. . .</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model) {
+            <tr>
+                <td>@user.Email</td>
+                <td class="hidden-xs">@user.FirstName</td>
+                <td class="hidden-xs">@user.LastName</td>
+                <td class="hidden-xs">@user.Language</td>
+                <td class="hidden-xs">@user.Roles</td>
+                <td class="hidden-xs">@user.Tenants</td>
+                <td>
+
+                    <a href="@Url.Action("EditUser", new { Id = user.Id })" class="btn btn-success glyphicon glyphicon-edit">@Resources.Edit</a><br />
+                    @if (user.Email != "host@teleboard.ca")
+                    {
+                        <a href="@Url.Action("DeleteUser", new { Id = user.Id })" onclick="return teleboard.page.onDeleteUserClick();" class="btn btn-danger glyphicon glyphicon-remove">@Resources.Delete</a><br/>
+                    }
+                    <button href="@Url.Action("ResetPassword", new { Id = user.Id })" onclick="teleboard.page.onSendResetPasswordClick('@user.Id')" class="btn btn-warning glyphicon glyphicon-send">@Resources.ResetPassword</button><br />
+                    <a href="@Url.Action("ResetPasswordToDefault", new { Id = user.Id })" class="btn btn-warning glyphicon glyphicon-send">@Resources.ResetPasswordToDefault</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+
+@section BreadcrumbMenu {
+    <a class="btn btn-secondary" href="/Admin/AddUser"><i class="icon-plus"></i> &nbsp;@Resources.AddNewUser</a>
+}
+
+@section BreadcrumbItems {
+    <li class="breadcrumb-item">@Resources.Administration</li>
+    @*<li class="breadcrumb-item">
+        <a href="#">@Resources.Security</a>
+    </li>*@
+    <li class="breadcrumb-item active">@Resources.Users</li>
+}
+
+@section scripts {
+    <script src="~/Content/assets/pages/scripts/user_admin_users.js"></script>
+}

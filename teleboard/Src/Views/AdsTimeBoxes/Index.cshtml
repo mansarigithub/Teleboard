@@ -1,0 +1,164 @@
+﻿@using Teleboard.UI.Models.Device
+@using Teleboard.Common.ExtensionMethod
+@using Teleboard.Common.Enum
+
+@model AdsScheduleViewModel
+
+@{
+    var device = Model.Device;
+    ViewBag.Title = Resources.DeviceTimeBox;
+    var userLang = (User as Teleboard.DomainModel.Core.ApplicationUser).Language;
+}
+
+@Html.Hidden("deviceId", Model.Device.Id)
+<div class="modal fade" id="eventModal" tabindex="-1" role="dialog" data-keyboard="false">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            @*<div class="modal-header">
+                    <h5 class="modal-title">@Resources.ScheduleDevice</h5>
+                </div>*@
+
+            <div class="modal-body">
+                <div class="form-body">
+                    <h3 class="box-title">@Resources.Schedule</h3>
+                    <hr class="m-t-0 m-b-20">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label class="control-label">@Resources.Day : </label>
+                            <label class="form-control-static timebox-info-day"></label>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="control-label">@Resources.Duration: </label>
+                            <label class="form-control-static timebox-info-duration"></label>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="control-label">@Resources.Used: </label>
+                            <label class="form-control-static timebox-info-used-time"></label>
+                        </div>
+                    </div>
+
+                    <div class="m-t-20 m-b-10 ">
+                        @(Resources.From + ": ")<strong class="timebox-info-from"></strong>
+                        <span class="pull-right">@(Resources.To + ": ")<strong class="timebox-info-to"></strong></span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-warning wow" style="width: 0%; height:20px;" role="progressbar"> <span class="sr-only">60% Complete</span> </div>
+                    </div>
+                    <div class="m-t-10 m-b-30 text-center" style="color:#4c8538">@Resources.FreeTime: <strong class="timebox-info-free-time"></strong></div>
+
+                    <h3 class="box-title">@Resources.Advertisements</h3>
+                    <hr class="m-t-0 m-b-10">
+                </div>
+
+                <div class="row no-gutters">
+                    @foreach (var content in Model.Contents)
+                    {
+                        <div class=" col-12 col-sm-4 col-md-4 col-lg-4 col-xl-3 content-box">
+                            <div class="content-container">
+                                <div class="content-header">
+                                    <input class="content-delay-sec"
+                                           maxlength="4"
+                                           max="9999"
+                                           type="number"
+                                           id="contentDelaySeconds_@content.Id"
+                                           value="@(content.Duration.HasValue ? content.Duration.ToString() : "5")"
+                                           data-content-id="@content.Id" />
+                                    <span class="small">@Resources.Sec</span>
+                                </div>
+                                @Html.Partial("_ContentThumbnail", content)
+                                <div class="content-footer">
+                                    <label for="content_@content.Id">@content.Description.Cut(20)</label>
+                                </div>
+                            </div>
+                            <div class="text-center selection">
+                                <input type="checkbox" id="content_@content.Id" class="filled-in chk-col-purple content-checkbox" data-content-id="@content.Id" onchange="page.handlContentCheckBoxChange(@content.Id, event)">
+                                <label for="content_@content.Id"></label>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success  ok-button float-left">@Resources.Ok</button>
+                <button type="button" class="btn btn-default btn-modal btn-modal-cancel" data-dismiss="modal">@Resources.Cancel</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        @Resources.Device: <a href="/Devices/Edit/@device.Id">@device.Name </a>
+        <span id="lastSaveTime" class="display-none float-right">Changes saved(<span class="time"></span>)</span>
+    </div>
+    <div class="card-block card-body">
+        <div id="calendarContainer">
+            <div id="calendar">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="timeIndicator" style="z-index:3000; display:none; position:absolute ; top:0; left:0; height:2px; width:100%; background-color:orangered;"></div>
+
+@section pageHelp {
+    <div class="alert alert-success alert-dismissible fade hide page-help" role="alert" data-page-name="channels-index">
+        <table>
+            <tr>
+                <td>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </td>
+                <td>
+                    <p>@Resources.PageHelpMessage_AdsTimeBox_Index</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+}
+
+@section BreadcrumbItems
+    {
+    <li class="breadcrumb-item">
+        <a href="/Scheduler">
+            @Resources.Scheduler
+        </a>
+    </li>
+    <li class="breadcrumb-item">
+        <a href="/Scheduler/Edit/@device.Id">
+            @device.Name
+        </a>
+    </li>
+    <li class="breadcrumb-item active">
+        @Resources.TimeBox
+    </li>
+}
+
+@section ComponentScripts
+    {
+}
+
+@section scripts
+    {
+    <script src="~/Scripts/moment.min.js"></script>l
+    <script src="~/Scripts/fullcalendar/fullcalendar.min.js"></script>
+    @*<script src="~/Scripts/fullcalendar/locale/fa.js"></script>*@
+
+    @*<script type="text/javascript" src="~/Content/assets/layouts/material/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>*@
+    <script src="~/Content/assets/layouts/material/plugins/sweetalert/sweetalert.min.js"></script>
+    @*<script src="~/Scripts/persian-date.min.js"></script>*@
+    <script src="~/Scripts/persian-number-parser.js"></script>
+    <script src="~/Content/assets/pages/scripts/user_adstimebox_index.js"></script>
+}
+
+@section styles{
+    <link href="~/Content/fullcalendar.min.css" rel="stylesheet" />
+    <link href="~/Content/fullcalendar.print.min.css" rel="stylesheet" media="print" />
+    @*<link rel="stylesheet" href="~/Content/assets/layouts/material/plugins/bootstrap-timepicker/css/bootstrap-timepicker.css" type="text/css" />*@
+    <link href="~/Content/assets/layouts/material/plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="~/Content/assets/pages/css/user_adstimebox.css" rel="stylesheet" />
+}

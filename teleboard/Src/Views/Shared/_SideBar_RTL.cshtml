@@ -1,0 +1,61 @@
+﻿@{
+    var userIsHost = User.IsInRole("Host");
+    var userIsAdvertiser = User.IsInRole("Advertiser");
+    var userIsTenantAdmin = User.IsInRole("TenantAdmin");
+    var userIsContentCreator = User.IsInRole("ContentCreator");
+}
+
+
+<ul id="sidebarnav">
+    @*<li class="nav-small-cap">Management</li>*@
+    <li class="active">
+        <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+            <i class="fa fa-sliders"></i><span class="hide-menu">@Resources.Management</span>
+        </a>
+        <ul aria-expanded="false" class="collapse">
+            @if (User.IsInRole("TenantAdmin") || User.IsInRole("Host") || User.IsInRole("ContentCreator") || User.IsInRole("Advertiser"))
+            {
+                <li><a href="/Contents">@(userIsAdvertiser ? Resources.Advertisements : Resources.Contents)</a></li>
+            }
+
+            @if (User.IsInRole("Advertiser"))
+            {
+                <li><a href="/adsdevices">@Resources.Devices</a></li>
+            }   
+            @if (User.IsInRole("TenantAdmin") || User.IsInRole("Host"))
+            {
+                <li><a href="/Channels">@Resources.Channels</a></li>
+                <li><a href="/Scheduler">@Resources.Scheduler</a></li>
+                <li><a href="/Approval">@Resources.ContentApproval</a></li>
+            }
+        </ul>
+    </li>
+
+    @if (User.IsInRole("Host"))
+    {
+        <li class="nav-devider"></li>
+        @*<li class="nav-small-cap text-danger">Administrator Area</li>*@
+        <li>
+            <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+                <i class="fa fa-cogs"></i><span class="hide-menu">@Resources.Administration</span>
+            </a>
+            <ul aria-expanded="false" class="collapse">
+                <li><a href="/Tenants">@Resources.Tenants</a></li>
+                <li><a href="/Tenants/Create">@Resources.AddTenant</a></li>
+                <li class="nav-devider"></li>
+
+                <li><a href="/Admin/Users">@Resources.Users</a></li>
+                <li><a href="/Admin/AddUser">@Resources.AddUser</a></li>
+
+                <li><a href="/Admin/Roles">@Resources.Roles</a></li>
+                <li><a href="/Admin/AddRole">@Resources.AddRole</a></li>
+
+                <li class="nav-devider"></li>
+                <li><a href="/ConnectionTypes">@Resources.ConnectionTypes</a></li>
+                <li><a href="/ContentTypes">@Resources.ContentTypes</a></li>
+                <li><a href="/Translation">@Resources.Translation</a></li>
+                <li><a href="/Log">@Resources.Logs</a></li>
+            </ul>
+        </li>
+    }
+</ul>

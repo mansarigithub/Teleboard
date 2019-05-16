@@ -1,0 +1,95 @@
+﻿@model Teleboard.Models.DeviceViewModel
+
+@{
+    ViewBag.Title = Resources.Details;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <h4>@Resources.Device</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenantName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenantName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DeviceId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeviceId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Latitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Latitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Longitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Longitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Version)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Version)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConnectionType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConnectionType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastConnectedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastConnectedUtc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RegisteredOnUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegisteredOnUtc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(Resources.BackToList, "Index")
+</p>

@@ -1,0 +1,76 @@
+﻿@using Teleboard.Common.Enum
+@using Teleboard.Extensions
+@using Teleboard.UI.Infrastructure.Globalization
+
+@model Teleboard.Models.AddUserViewModel
+@{
+    ViewBag.Title = Resources.AddNewUser;
+}
+
+@using (Html.BeginForm("AddUser", "Admin", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <div class="card">
+        <div class="card-block card-body">
+            @Html.AntiForgeryToken()
+            <div class="form-group row">
+                @Html.LabelFor(m => m.Email, new { @class = "col-md-3 form-control-label" })
+                <div class="col-md-9">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Email)
+                </div>
+            </div>
+            <div class="form-group row">
+                @Html.LabelFor(m => m.FirstName, new { @class = "col-md-3 form-control-label" })
+                <div class="col-md-9">
+                    @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.FirstName)
+                </div>
+            </div>
+            <div class="form-group row">
+                @Html.LabelFor(m => m.LastName, new { @class = "col-md-3 form-control-label" })
+                <div class="col-md-9">
+                    @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.LastName)
+                </div>
+            </div>
+            <div class="form-group row">
+                @Html.LabelFor(m => m.Language, new { @class = "col-md-3 form-control-label" })
+                <div class="col-md-9">
+                    @Html.DropDownListFor(m => m.Language, AppLanguage.GetSupportedLanguagesListItems(), new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Language)
+                </div>
+            </div>
+
+            <div class="form-group row" style="margin-top:30px">
+                <label class="col-md-3 form-control-label">@Resources.Roles</label>
+                <div class="col-md-9">
+                    @Html.CheckboxListFor(x => x.SelectedRoles, Model.AllRoles, Model.RoleInfos.ToDictionary(key => key.Name, value => value.Name))
+                </div>
+            </div>
+            <div class="form-group row" style="margin-top:30px">
+                <label class="col-md-3 form-control-label">@Resources.Tenants</label>
+                <div class="col-md-9">
+                    @Html.CheckboxListFor(x => x.SelectedTenants, Model.AllTenants, Model.TenantInfos.ToDictionary(key => key.Id.ToString(), value => value.Name))
+                </div>
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <button type="submit" class="btn btn-success waves-effect waves-light">
+                <span class="btn-label"><i class="fa fa-save"></i></span>@Resources.Save
+            </button>
+        </div>
+    </div>
+}
+
+@section BreadcrumbItems {
+    <li class="breadcrumb-item">@Resources.Administration</li>
+    @*<li class="breadcrumb-item">
+            <a href="#">@Resources.Security</a>
+        </li>*@
+    <li class="breadcrumb-item active">@Resources.AddNewUser</li>
+}
+
+
+@section Scripts {
+}

@@ -1,0 +1,100 @@
+﻿@using Teleboard.PresentationModel.Model.Content
+@using Teleboard.Common.ExtensionMethod;
+@using Teleboard.Common.Enum;
+
+@{
+    ViewBag.Title = Resources.Contents;
+    var contents = (IEnumerable<ContentPM>)ViewBag.Contents;
+    var showApproveButton = User.IsInRole("Host") || User.IsInRole("TenantAdmin");
+}
+@Html.Hidden("showApproveButton", showApproveButton)
+<table id="grid"></table>
+
+<template id="rowTemplate">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="thumb-placeholder"></div>
+        </div>
+        <div class="col-md-8">
+            @*<h4 class="content-approval-status"><span class="badge badge-danger "></span></h4>*@
+            <div class="row m-t-20">
+                <div class="col-md-6">
+                    <h5> <label class="text-primary">@Resources.Tenant:</label> <span class="content-tenant-name"></span></h5>
+                </div>
+                <div class="col-md-6">
+                    <h5> <label class="text-primary">@Resources.Size:</label> <span class="content-size"></span></h5>
+                </div>
+                <div class="col-md-12">
+                    <h5> <label class="text-primary">@Resources.Description:</label> <span class="content-description"></span></h5>
+                </div>
+                <div class="col-md-12 m-t-15">
+                    <a class="btn btn-sml btn-success btn-edit-content">@Resources.Edit</a>
+                    <span class="btn btn-sml btn-danger btn-delete-content">@Resources.Delete</span>
+                    @if (showApproveButton)
+                    {
+                        <a class="btn btn-sml btn-success btn-approve-content">@Resources.Approve</a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+@section pageHelp {
+    <div class="alert alert-success alert-dismissible fade hide page-help" role="alert" data-page-name="contents-index">
+        <table>
+            <tr>
+                <td>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </td>
+                <td>
+                    <p>
+                        @if (User.IsInRole(AppRole.Advertiser.ToString()))
+                        {
+                            @Resources.PageHelpMessage_Content_Index_ForAdvertiser;
+                        }
+                        else
+                        {
+                            @Resources.PageHelpMessage_Content_Index;
+                        }
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+}
+
+@section BreadcrumbMenu {
+    <a href="/Contents/Create" class="btn btn-info waves-effect waves-light float-right">
+        <span class="btn-label"><i class="fa fa-plus"></i></span>@Resources.AddContent
+    </a>
+    <div class="float-left" style="padding:10px 0 0 5px;">
+        <input type="checkbox" id="imagesCheckbox" class="filled-in chk-col-purple filter" checked="">
+        <label for="imagesCheckbox" style="margin-right:20px;">@Resources.Images</label>
+
+        <input type="checkbox" id="videosCheckbox" class="filled-in chk-col-purple filter" checked="">
+        <label for="videosCheckbox">@Resources.Videos</label>
+    </div>
+}
+@section BreadcrumbItems {
+    <li class="breadcrumb-item">
+        <a href="#">@Resources.Contents</a>
+    </li>
+}
+@section scripts {
+    <script src="~/Scripts/gijgo/modular/core.min.js"></script>
+
+    <script src="~/Scripts/gijgo/modular/grid.min.js"></script>
+    <script src="~/Scripts/gijgo/combined/messages/messages.fa-ir.js"></script>
+    <script src="~/Content/assets/layouts/material/plugins/sweetalert/sweetalert.min.js"></script>
+    <script src="~/Content/assets/pages/scripts/user_content_index.js"></script>
+    <script src="~/Scripts/component-customized-scripts.js"></script>
+}
+@section styles {
+    <link href="~/Content/assets/layouts/material/plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="~/Content/gijgo/modular/core.css" rel="stylesheet" />
+    <link href="~/Content/gijgo/modular/grid.min.css" rel="stylesheet" />
+    <link href="~/Content/assets/pages/css/user_contents_index.css" rel="stylesheet" />
+}

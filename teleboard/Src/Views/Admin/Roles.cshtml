@@ -1,0 +1,42 @@
+﻿@model List<Teleboard.Models.GetRolesViewModel>
+
+@{
+    ViewBag.Title = Resources.Roles;
+}
+
+<h3 class="panel-info">@ViewBag.Message</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Resources.Name</th>
+            <th>@Resources.Description</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var role in Model) {
+            <tr>
+                <td>@role.Name</td>
+                <td>@role.Description</td>
+                <td>
+                    @*<a href="@Url.Action("EditRole", new { Id = role.Id })" disabled class="btn btn-success glyphicon glyphicon-remove">Edit</a>
+                        <a href="@Url.Action("DeleteRole", new { Id = role.Id })" class="btn btn-danger glyphicon glyphicon-remove">Delete</a>*@
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+@section BreadcrumbMenu {
+    <a class="btn btn-secondary" href="@Url.Action("AddRole")"><i class="icon-plus"></i> &nbsp;Add a new role</a>
+}
+
+@section BreadcrumbItems {
+    <li class="breadcrumb-item">@Resources.Administration</li>
+    @*<li class="breadcrumb-item">
+        <a href="#">@Resources.Security</a>
+    </li>*@
+    <li class="breadcrumb-item active">@Resources.Roles</li>
+}

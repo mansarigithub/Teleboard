@@ -1,0 +1,24 @@
+﻿@model Teleboard.DomainModel.Core.ConnectionType
+
+@{
+    ViewBag.Title = Resources.Details;
+}
+
+<h2>@Resources.Details</h2>
+
+<div>
+    <h4>@Resources.ConnectionType</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(Resources.Edit, "Edit", new { id = Model.Id }) |
+    @Html.ActionLink(Resources.BackToList, "Index")
+</p>

@@ -1,0 +1,61 @@
+@media(max-width:576px) {
+    .card-block {
+        padding: 0px !important;
+    }
+
+    /*.all-contents .col-6, .all-contents .col-12 {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .all-contents .row {
+        margin-right: -5px;
+        margin-left: -5px;
+    }
+*/
+
+    .gj-grid-md td:first-of-type {
+        padding-left: 10px;
+    }
+}
+
+
+.gj-grid-md td {
+    padding: 5px;
+}
+
+.gj-grid th:first-child {
+    width: 10px;
+}
+
+.gj-grid th:last-child {
+    width: 50px;
+    text-align: left;
+}
+
+.gj-grid tr[data-role=filter] th input[data-field=Id] {
+    border: 2px solid #dacfde;
+    padding: 4px;
+    color: #53535d;
+    border-radius: 4px;
+    margin-top: 13px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+TABLE.gj-grid DIV[data-role=display] {
+    display: block !important;
+}
+
+    TABLE.gj-grid DIV[data-role=display] > DIV {
+        display: flex !important;
+    }
+
+    TABLE.gj-grid thead tr[data-role=caption]{
+        display: none !important;
+    }
+
+
+TABLE.gj-grid label {
+    color:#64829c  !important;
+}
